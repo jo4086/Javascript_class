@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = 'This is string'
+        console.log(str1)
+
+        var str1 = "This is string!!"
+        console.log(str1)
+
+        var str1 = "This is \"string\" "
+
+        // 문자열에 따옴표 출력하기
+        /*
+        **  1. 문자열을 ''로 감싸고 안에 "" 쓰기
+        **  2. 문자열을 ""로 감싸고 안에 '' 쓰기
+        **  3. 감싸고 싶은 문자열 앞 뒤로 [\', \\""] 쓰기
+        **  4. 이스케이프 문자 사용하기
+            * \n : 띄워쓰기
+            * \\ : \ 문자
+            * \t :   */
+        var str2 = "Hello, 'world'"
+
+        var str3 = '동해물과 백두산이\n마르고 닳도록'
+        console.log(str3)
+
+        var str4 = '이름\\나이\\지역'
+        console.log(str4)
+
+        var str5 = '이름\t나이\t지역'
+
+        document.write(str2)
+        document.write(str1)
+        document.write(str3)
+        document.write(str4)
+        document.write(str5)
+    </script>
+    
+</body>
+</html>
