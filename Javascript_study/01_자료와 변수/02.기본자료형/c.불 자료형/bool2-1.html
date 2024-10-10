@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /** underfined, null, 0, 빈문자열('')을 제외한 모든 것은 Ture.
+          * underfined, null, 0, 빈문자열('') = false
+         */
+
+        // Boolean() : 괄호 안에 있는 boolean 타입으로 바꿔주는 자료형.
+        // Boolean은 오직 true와 false로만 구분 (불대수)
+
+        /* 
+        ** 예시
+        var booleanVar1 = Boolean("String")
+        var booleanVar2 = Boolean(null)
+        var booleanVar3 = Booelan(undefined)
+        var booleanVar4 = Boolean(4)
+        var booleanVar5 = Boolean(true)
+
+        자료형              true                                    false
+        Boolean             true                                    false
+        String      ''을 제외한 모든 스트링값                스트링이 ''일때
+        Number          0을 제외한 모든 큰 수                       0 or NaN
+        Object      null을 제외한 모든 object                      null
+        Undefined   사항 없음                                     undefined
+        Null        사항 없음                                       null
+
+        */
+
+        var num1 = 7
+        var num2 = '7'
+        var undefined = 7
+
+        console.log(Boolean(undefined))
+        console.log(Boolean(num1))
+        console.log(Boolean(null))
+        console.log(Boolean(num2))
+
+
+    </script>
+    
+</body>
+</html>

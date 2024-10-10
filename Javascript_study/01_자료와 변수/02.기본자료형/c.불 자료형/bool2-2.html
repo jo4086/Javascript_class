@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 확인: 사용자가 입력한 값을 변수에 저장
+        취소 : null 값을 변수에 저장 */
+        var name = prompt('당신의 이름은?')
+
+        // 값 입력 ㅡ> 확인 클릭 ㅡ> 문자열 ㅡ> name값 : true
+        // 값을 입력하지 않으면 빈 문자열이므로 결과값 : false
+        if (name) {
+        document.write('내 이름은 ' + name)
+        }
+
+        //  if문이므로 입력값이 없다면 name=false가되므로 실행되지 않음.
+        // 값은 작동방식으로는
+        /* 
+        if (name !== '') {
+        document.write('내 이름은 ' + name)
+        }                                       */
+        // 작동방식은 같지만 위쪽이 더 용량을 줄임
+    </script>
+    
+</body>
+</html>
