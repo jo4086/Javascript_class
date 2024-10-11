@@ -6,6 +6,11 @@
       // 숫자를 입력받습니다.
       const rawInput = prompt("cm 단위의 숫자를 입력해주세요.");
 
+      const inch_output = Number(rawInput) * 0.393701
+      const round_inch = Math.round(inch_output*100)/100
+
+      document.write(`${rawInput}cm는 약 ${round_inch}inch 입니다.`)
+
       // 입력을 숫자로 변경하고 cm 단위로 변경합니다.
 
       // 출력합니다.
