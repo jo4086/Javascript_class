@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // typeof : 데이터 형태 반환
+         var num
+
+         console.log(typeof num)
+         console.log(typeof 27)
+         console.log(typeof '문자열')
+         console.log(typeof true)
+         /* 결과값
+        underfined : num에 입력값을 넣지 않아서 underfined
+        number
+        string
+        boolean
+     */
+
+         console.log(Boolean(num))
+
+         console.log('')
+
+         var num = 20
+
+         console.log(typeof num)
+         console.log(typeof 27)
+         console.log(typeof '문자열')
+         console.log(typeof true)
+         /* 결과값
+        number
+        number
+        string
+        boolean
+     */
+
+         console.log('')
+
+         var a = 27
+
+         if (typeof a === 'number') {
+            console.log('a변수는 숫자형')
+         }
+      </script>
+   </body>
+</html>
