@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 티켓을 한장 예매하면서 오후 15시~ 오후 23시에 예매할 때 완료조건
+
+        var ticket = 1 // 예매갯수
+        var time = 16 // 예매 시간
+
+        const nip = prompt('예매 시간')
+        var num = Number(nip)
+
+        if (ticket == 1 && num <= 23 && num >= 15) {
+            document.write('예매 완료')
+        }
+    </script>
+    
+</body>
+</html>

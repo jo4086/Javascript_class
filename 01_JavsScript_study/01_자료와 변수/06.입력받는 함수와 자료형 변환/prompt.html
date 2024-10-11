@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 상수 선언
+        // const는 원래 값의 재할당이 불가능하지만 obj를 이용하면 변경 가능
+        // 완전 변경 불가능하게 만들고 싶다면 object.freeze()사용
+
+        const input = prompt('당신의 이름은?', '이름을 입력하세요')
+
+        // 출력
+        document.write(input)
+
+        const obj = { name: 'kim'}
+        obj.name = 'park'
+
+        console.log(obj)
+
+        /*
+        var 변수의 존재 범위 =  function
+        let, const 변수는 존재 범위가 거의 모든 {중괄호}
+        example : for, it, function 등 */
+    </script>
+    
+</body>
+</html>

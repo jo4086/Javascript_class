@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // inch를 입력받아 cm로 바꾸는 코드
+        const input = prompt('inch값을 입력하세요',)
+
+        let input_number = Number(input)
+
+        let cm = input_number * 2.54
+        console.log(cm)
+
+
+        let round_cm = Math.round(cm*100)/100
+        console.log(round_cm)
+
+        document.write(`${input}인치는 약 ${round_cm}cm 입니다.`)
+
+
+        /* 
+        1. inch값 받기
+        2. inch값 ㅡ> 숫자형 변환
+        3. 숫자형 ㅡ> cm로 변환
+        4. 출력 */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // inch를 입력받아 cm로 바꾸는 코드
+        const input = prompt('inch값을 입력하세요',)
+
+        // 숫자변환과 배율 압축
+        let cm = Number(input) * 2.54
+        console.log(cm)
+
+
+        let 세번째_반올림 = Math.round(cm*100)/100
+        console.log(세번째_반올림)
+
+        document.write(`${input}인치는 약 ${세번째_반올림}cm 입니다.`)
+
+
+        /* 
+        1. inch값 받기
+        2. inch값 ㅡ> 숫자형 변환
+        3. 숫자형 ㅡ> cm로 변환
+        4. 출력 */
+    </script>
+    
+</body>
+</html>

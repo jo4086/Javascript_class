@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let a = Number('52')
+         console.log(a)
+         console.log(typeof a)
+
+         let hi = 'hi'
+
+         let b = Number(hi)
+         // 개발자설정으로 보면 숫자타입이기에 파란색 글씨로 NaN으로 출력
+         console.log(b)
+         console.log(typeof b)
+
+         console.log('')
+         console.log('아스키 코드 h 반환')
+
+         let char_h = hi.indexOf('h')
+         console.log(char_h)
+
+         var h_Acd = hi.charCodeAt(char_h)
+         console.log(`문자열 h의 위치: '${char_h}' `)
+
+         console.log('')
+         console.log('아스키 코드 i 반환')
+
+         let char_i = hi.indexOf('i')
+         console.log(`문자열 i의 위치: '${char_i}' `)
+
+         var i_Acd = hi.charCodeAt(char_i)
+         console.log(i_Acd)
+         console.log(typeof i_Acd)
+      </script>
+   </body>
+</html>
