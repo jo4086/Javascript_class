@@ -12,15 +12,23 @@
 
          num++
          console.log(`num: ${num}, result: ${result}`)
+         // 첫번째 넘버는 ++로 1이더해져서 11
+         // result는 함수를 지정하지 않아서 undefined
 
          result = num--
          console.log(`num: ${num}, result: ${result}`)
+         // num에 -1 적용 : 10
+         // result는 --가 num뒤에 오므로 적용 되기 전인 11
 
          result = ++num + 5
          console.log(`num: ${num}, result: ${result}`)
+         // num은 ++로 1이 증가하여 11
+         // result는 ++가 num 앞에 오므로 1이 증가된 상태로 5가 더해져서 16
 
          result = 5 + num--
          console.log(`num: ${num}, result: ${result}`)
+         // num은 11에서 1이 감소 해서 10
+         // result는 감소되기 전인 num=11에 5를 추가하여 16
       </script>
    </body>
 </html>
