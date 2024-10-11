@@ -10,6 +10,48 @@
          const rawInput = prompt('태어난 해를 입력해주세요.', '')
          const year = Number(rawInput)
          const e = year % 12
+
+         // 자 축 인 묘 진 사 오 미 신 유 술 해
+         // 4 5   6  7  8  9 10 11  0  1 2  3
+         switch (e) {
+            case 0:
+               result = '원숭이'
+               break
+            case 1:
+               result = '닭'
+               break
+            case 2:
+               result = '개'
+               break
+            case 3:
+               result = '돼지'
+               break
+            case 4:
+               result = '쥐'
+               break
+            case 5:
+               result = '소'
+               break
+            case 6:
+               result = '호랑이'
+               break
+            case 7:
+               result = '토끼'
+               break
+            case 8:
+               result = '용'
+               break
+            case 9:
+               result = '뱀'
+               break
+            case 10:
+               result = '말'
+               break
+            case 11:
+               result = '양'
+               break
+         }
+         document.write(`당신이 태어난 ${year}년의 띠는 '${result}' 띠 입니다.`)
       </script>
    </body>
 </html>

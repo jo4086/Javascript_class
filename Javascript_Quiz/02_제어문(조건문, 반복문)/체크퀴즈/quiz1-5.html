@@ -8,6 +8,20 @@
    <body>
       <script>
          const a = Number(prompt('월을 입력해주세요.', ''))
+
+         if (a >= 3 && 5 >= a) {
+            document.write(`${a}월은 봄 입니다.`)
+         } else if (a >= 6 && 8 >= a) {
+            document.write(`${a}월은 여름 입니다.`)
+         } else if (a >= 9 && 11 >= a) {
+            document.write(`${a}월은 가을 입니다.`)
+         } else {
+            if (a < 1 || a > 13) {
+               document.write('입력이 잘못되었습니다.')
+            } else {
+               document.write(`${a}월은 겨울 입니다.`)
+            }
+         }
       </script>
    </body>
 </html>
