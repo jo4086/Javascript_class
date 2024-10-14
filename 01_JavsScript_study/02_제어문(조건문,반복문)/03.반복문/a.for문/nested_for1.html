@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이중 for문을 사용해서 구구단 출력
+
+        for (let i = 1; i <=9 ; i++) {
+            console.log(`---${i}단---`)
+            document.write(`구구단 ${i}단<br>`)
+            for (let j = 1; j <= 9; j++) {
+                console.log(`${i} × ${j} = ${i * j}`)
+                document.write(`${i} × ${j} = ${i * j} <br>`)
+            }
+            document.write(`<br>`)
+        }
+
+        /* i가 1로 시작
+        i=1일때 밑에 j가 1~9반복 여기서 console.log 9번 출력
+        i의 1회 반복 끝
+        그다음은 i=2일때 밑에 j가 9번 반복
+        i가 9번 반복될 때 까지 반복해서 구구단 완성 */
+
+    </script>
+    
+</body>
+</html>

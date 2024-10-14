@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 별이 반복해서 늘어나는 반복 함수 생성
+
+        let output = ''
+
+        for (i = 1; i < 5; i++) {
+            for(let j = 0; j < i; j++) {
+            output += '*'
+            }
+            output += '<br>' //줄바꿈
+        }
+        console.log(output)
+
+        document.write(output)
+
+    </script>
+    
+</body>
+</html>

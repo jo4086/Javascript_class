@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 류상진 학생이 휴학
+        // 수강 신청 목록에 류상진 제거
+        const students = ['김영수', '이지혜', '류상진', '박미나', '서한울']
+
+        const A = students.indexOf('류상진')
+        console.log(A)
+
+        students.splice(2,1)
+        console.log('류상진 학생 제외: ',students)
+        document.write(`남은 수강생: ${students}`)
+        
+    </script>
+    
+</body>
+</html>

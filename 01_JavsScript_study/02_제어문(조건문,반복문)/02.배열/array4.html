@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열의 맨 뒤에 요소 추가
+        // push() : 사용
+        const todos = ['우유 구매','업무 메일 확인','헬스']
+        console.log(todos)
+
+        todos.push('저녁 식사 준비', '잠자리 준비')
+        console.log(todos)
+
+        todos.push('피아노 연습')
+        console.log(todos)
+
+        // length를 이용해 맨 뒤에 요소를 추가하는 방법
+
+        console.log('')
+        console.log(todos.length)
+
+        /*
+        todos의 배열 길이는 6
+        인덱스는 0부터 계산해서 5까지 요소만 있음
+        todos[todos.length] = todos[6] 이므로
+        없던 요소라서 추가됌         */
+        todos[todos.length] = '스트레칭'
+        console.log(todos)
+
+    </script>
+    
+</body>
+</html>
