@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+        // 02_제어문 / 02.배열
+
         /* 1. array */
 
         /* 2. array 속 array */
@@ -31,10 +33,44 @@
         /* 7. 인덱스에 요소 위치 찾기
            const A = 목록.indexOf('요소이름') */
         
-        /* 줄바꿈,,
+        /* 8. 줄바꿈,,
         console.log에서 줄바꿈은 \n
         document.write에서 줄바꿈은 <br> */
 
+
+        // 02_제어문 / 03. 반복문 (for, while)
+
+      /* 02-a. for문
+
+      1. for of array -
+      array의 요소를 출력
+      for (const a of array ) { }
+      : 배열에 속한 요소들을 순서대로 출력
+      
+      2. for in array -
+      array의 번호 출력
+      for (const i in array ) { }
+      array의 번호값 끝까지 반복,,
+
+      이건 array.indexOf(for (const a of array))와 같을지도
+
+
+       */
+
+
+
+      /* !함수
+      ★ return문을 만나면 함수는 종료됌 */
+
+      function printNumber(num) {
+         if (num==2) {
+            return
+         }
+         console.log(`매개변수로 받은 숫자는 ${num}입니다.`)
+      }
+      printNumber(1) // if에서 안걸리므로 console.log 출력
+      printNumber(2) // 리턴에서걸리므 함수증발 ㅡ> console.log X
+      printNumber(3) // if에서 안걸리므로 console.log 출력
     </script>
     
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = Number(prompt('정수를 입력하세요', '0'))
+
+        //소수점 내림
+        const integer = Math.floor(input)
+        console.log(integer)
+
+        // 정수인지 판단
+        const decimal_point = input - integer
+        console.log(decimal_point)
+        if (decimal_point == 0) {
+            if (input >= 50) {
+                document.write(`입력한 값'${input}'은(는) 50이상의 정수입니다.`)
+            } else {
+                document.write(`입력한 값 '${input}'은(는) 50 미만의 정수입니다.`)
+            }
+        } else {
+            document.write(`입력한 값이 잘못되었습니다.<br><br> 정수로 다시 입력해주세요.`)
+
+        }
+    </script>
+</body>
+</html>

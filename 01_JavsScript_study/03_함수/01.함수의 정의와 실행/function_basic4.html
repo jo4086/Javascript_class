@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function printNumber(num) {
+         if (num==2) {
+            return
+         }
+         console.log(`매개변수로 받은 숫자는 ${num}입니다.`)
+      }
+      printNumber(1) // if에서 안걸리므로 console.log 출력
+      printNumber(2) // 리턴에서걸리므 함수증발 ㅡ> console.log X
+      printNumber(3) // if에서 안걸리므로 console.log 출력
+    </script>
+    
+</body>
+</html>

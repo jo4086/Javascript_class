@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+        
+        while (true) {
+            const grade = prompt('학년입력','1~6학년')
+            
+            if (grade>6 || grade <1) {
+                alert(`학년 잘못입력\n다시 입력`)
+                continue
+            } else {
+                break
+            }
+        }
+        while (true) {
+            const score = prompt('점수입력','0~100점 사이')
+            if (score>=0 && score<=100) {
+                break
+            } else {
+                alert(`점수 잘못입력\n다시 입력`)
+            }
+        }
+
+      </script>
+   </body>
+</html>

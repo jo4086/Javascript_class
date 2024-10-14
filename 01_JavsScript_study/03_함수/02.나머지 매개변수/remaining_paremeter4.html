@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 매개변수의 자료형에 따라 조건 분기해 결과를 출력해주는 함수
+         function test(first, b, c, ...rests) {
+            console.log('first값: ', first)
+            // isArray() -> 함수인지 아닌지 true, false로 리턴해주는 함수
+            if (Array.isArray(first)) {
+               console.log('first:', first)
+               console.log('b: ', b)
+               // console.log(b)가 나오지 않는 이유
+               // [대괄호]속에 묶인 전체가 하나의 요소로 판별됌 : object 타입 (array는 object타입임)
+               // 그러므로 두번째 요소는 없으니 undefined값 출력
+
+               // 만약 뒤에 개별 요소를 넣는다면??
+               console.log('rests 없음:', rests)
+
+               console.log('')
+               console.log('▼ typeof===number 지정')
+               // type===number는 (소괄호)를 선택
+            } else if (typeof first === 'number') {
+               console.log('first:', first)
+               console.log('rests 있음:', rests)
+               console.log('b: ', b)
+            }
+         }
+
+         test(
+            [52, 273, 32, 103, 275, 24, 57], // 첫번째 요소 : first
+            6, // 두번째 요소 : b
+            3, // 세번째 요소 : c
+            10, // 네번째 요소 : 여기부터 나머지 요소 ...rests출력
+            ['민혁', '소라'], // 다섯째 요소
+            [4, 6, 2]
+         ) // 여섯째 요소
+
+         test(52, 273, 32, 103, 275, 24, 57)
+
+         console.log('')
+         console.log('▼ 실험')
+         const a = [1, 2, 3, 4]
+         const b = (1, 2, 3, 4)
+         console.log(`const a= [1,2,3,4]의 type: ${typeof a}`)
+         console.log(`const b= (1,2,3,4)의 type: ${typeof b}`)
+      </script>
+   </body>
+</html>
+
+<!-- 
+first값:  (7) [52, 273, 32, 103, 275, 24, 57]
+first: (7) [52, 273, 32, 103, 275, 24, 57]
+rests 없음: []
+first값:  52
+first: 52
+rests 있음: (6) [273, 32, 103, 275, 24, 57]
+ -->
+
+<!-- 앞에 매개변수를 3개지정,
+first값:  (7) [52, 273, 32, 103, 275, 24, 57]
+first: (7) [52, 273, 32, 103, 275, 24, 57]
+rests 없음: []
+first값:  52
+first: 52
+rests 있음: (4) [103, 275, 24, 57]
+ -->

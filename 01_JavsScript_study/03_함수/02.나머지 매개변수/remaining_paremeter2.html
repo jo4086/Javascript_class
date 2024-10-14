@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 나머지 매개변수를 사용한 최솟값 구하는 함수 만들기
+         function min(...items) {
+            // 매개변수 items는 배열처럼 사용합니다.
+            let output = items[0]
+            console.log('output=items[0]인 요소:',output)
+            console.log('\nitmes의 요소: ',items)
+            for (const item of items) {
+               if (output > item) {
+                  output = item
+               }
+            }
+            return output
+         }
+         // 52 > 52 : false 다시
+         // 52 > 273 : false 다시
+         // 52 > 32 : true, output = 32로 변경
+         // 32 > 103 : false 다시
+         // 32 > 275 : false 다시
+         // 32 > 24 : true, output = 24로 변경
+         // 24 > 57 : false 다시,,, 완료
+         // 최종값 (리턴) output = 24
+
+         // 함수 호출하기
+         console.log('min(52,273,32,103,275,24,57)')
+         console.log(`=${min(52, 273, 32, 103, 275, 24, 57)}`)
+      </script>
+   </body>
+</html>

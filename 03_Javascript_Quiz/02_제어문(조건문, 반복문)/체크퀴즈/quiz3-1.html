@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      const array = ['사과', '배', '귤', '바나나']
+
+      console.log('# for in 반복문')
+      for (const i in array) {
+        console.log(i)
+      }
+
+      console.log('# for of 반복문')
+      for (const i of array) {
+        console.log(i)
+      }
+
+      /* 
+      1. for (const i in array) {
+        console.log(i) }
+
+        for ~ in 배열에서는 해당 배열 번호를 출력 하므로
+        array의 요소는 4개, 각 0, 1, 2, 3 순으로 출력
+        array.indexOf(array[0]) = 0
+        array.indexOf(array[1]) = 1
+        array.indexOf(array[2]) = 2
+        array.indexOf(array[3]) = 3
+       */
+
+      /* 
+      2. for (const i of array) {
+        console.log(i) }
+        
+        for ~ of 배열에서는 해당 위치에 있는 요소들을 출력한다.
+        array[0] = 사과
+        array[1] = 배
+        array[2] = 귤
+        array[3] = 바나나
+        
+        */
+    </script>
+  </head>
+  <body></body>
+</html>
+ 

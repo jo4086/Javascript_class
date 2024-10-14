@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let output = 0
+
+        // 1 ~ 10까지의 수 중 짝수만 출력
+
+        // continue에서 만나면 아래는 실행X 처음부터 다시 반복
+        for (let i = 1; i <= 10; i++) {
+
+            if (i % 2 == 1) {
+                continue
+            }
+            console.log(`${0.5*i}번째 값: ${i}`)
+            // 짝수의 누적 합산
+            output += i
+        }
+        // 짝수 누적합산 출력
+        console.log('')
+        console.log('누적합산 값 출력')
+        console.log(output)
+    </script>
+    
+</body>
+</html>

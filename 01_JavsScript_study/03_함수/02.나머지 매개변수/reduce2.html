@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const arr = [1, 2, 3, 4, 5]
+
+         arr.reduce(function (acc, cur, idx) {
+            console.log(acc, cur, idx)
+            return acc + cur
+         },
+         0) // <=초기값(arr) 이후 순차대로 arr의 0번부터 4번까지 순서대로 더함
+         // 0(arr) + 1(cur) : 0번째, acc에 값 저장
+         // 1(acc) + 2(cur) : 1번째 array , acc에 1+2 저장
+         // 3(acc) + 3(cur) : 2번째 array , acc에 3+3 저장
+         // 6(acc) + 4(cur) : 3번째 array , acc에 6+4 저장
+         // 10(acc) + 5(cur) : 4번째 array 완료
+         //  리턴 : acc + cur 둘이 합산한다는 뜻
+
+         // arr cur idx
+         // 0 1 0
+         // 1 2 1
+         // 3 3 2
+         // 6 4 3
+         // 10 5 4
+      </script>
+   </body>
+</html>

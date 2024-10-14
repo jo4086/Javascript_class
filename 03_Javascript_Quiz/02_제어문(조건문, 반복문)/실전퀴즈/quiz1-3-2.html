@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         while (true) {
+            const grade = Number(prompt('1~6까지 학년입력'))
+            if (grade > 6 || grade < 1) {
+               alert(`학년 잘못입력\n다시 입력`)
+               continue
+            } else {
+               while (true) {
+                  const score = Number(prompt('0~100까지 점수입력'))
+                  if (score < 0 || score > 100) {
+                     alert(`점수 잘못입력\n다시 입력`)
+                  } else {
+                     console.log(grade)
+                     console.log(score)
+                     const pass = `학년: ${grade}학년<br>
+                            점수: ${score}점<br>
+                            합격여부: 합격`
+                     const fail = `학년: ${grade}학년<br>
+                            점수: ${score}점<br>
+                            합격여부: 불합격`
+                     const passlog = `학년: ${grade}학년\n점수: ${score}점\n합격여부: 합격`
+                     const faillog = `학년: ${grade}학년\n점수: ${score}점\n합격여부: 불합격`
+
+                     if (grade == 4) {
+                        if (score >= 70) {
+                           document.write(pass)
+                           console.log(passlog)
+                        } else {
+                           document.write(fail)
+                           console.log(faillog)
+                        }
+                     } else if (grade >= 1 && grade <= 6) {
+                        if (score >= 60) {
+                           document.write(pass)
+                           console.log(passlog)
+                        } else {
+                           document.write(fail)
+                           console.log(faillog)
+                        }
+                     }
+                     break
+                  }
+               }
+            }
+            break
+         }
+      </script>
+   </body>
+</html>

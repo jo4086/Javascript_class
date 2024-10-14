@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const search = prompt('찾는 단어를 입력하세요', '')
+         const dict = ['다소니', '가람', '미르', '미리내', '그린내', '마루', '비나리']
+
+         // 0 1 2 3 4 5 6 !== -1 : -1과 같지않다 = true
+         // 인덱스오프는 0부터양수이기 때문에 같지 않다가 true면 인덱스에 해당 값이 있다. 
+         if (dict.indexOf(search) !== -1) {
+            const value = dict[dict.indexOf(search)]
+            console.log(value)
+            document.write(`검색 단어인 '${value}'은(는) 인덱스 번호: ${dict.indexOf(search)}번에 있습니다.`)
+         } else {
+            console.log('찾는 단어가 사전에 없습니다.')
+            document.write(`찾는 단어가 사전에 없습니다.`)
+         }
+      </script>
+   </body>
+</html>

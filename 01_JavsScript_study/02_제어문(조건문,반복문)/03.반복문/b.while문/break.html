@@ -7,19 +7,22 @@
    </head>
    <body>
       <script>
-         // 반복문
+         // whule(true) {
+         // alert ()}
          for (let i = 0; true; i++) {
-            alert(i + '번째 반복문입니다.')
+            alert(i + '번째 반복문 입니다.')
 
-            // 진행 여부를 물어봅니다.
-            const isContinue = confirm('계속하시겠습니까?')
+            const isContinue = confirm('계속 하시겠습니까?')
+
+            // 확인 : true / 취소 : false
             if (!isContinue) {
                break
+
+               alert('이건 실행되지 않습니다.')
             }
          }
-
-         // 프로그램의 종료를 확인합니다.
          alert('프로그램 종료')
+         //break문을 만나면 아래 코드는 실행하지 않고 반복문을 빠져 나온다.
       </script>
    </body>
 </html>
