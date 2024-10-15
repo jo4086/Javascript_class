@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      const max = function (array) {
+        console.log(array)
+        let a = array[0]
+        for (const num of array) {
+          console.log(num)
+          if (num>a) {
+            a = num
+          }
+        }
+        return a
+      }
+      console.log(max([1, 2, 3, 4]));
+    </script>
+  </head>
+  <body></body>
+</html>

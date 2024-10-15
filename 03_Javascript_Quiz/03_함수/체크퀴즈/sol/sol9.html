@@ -7,14 +7,9 @@
    </head>
    <body>
       <script>
-         let a = 0
-
-         for (i = 1; i < 20; i++) {
-            if (i % 2 == 0 || i % 3 == 0) {
-               a += i
-            }
-         }
-         document.write(a)
+         const scores = [90, 80, 77, 20, 100]
+         const result = scores.map((score) => score + 10)
+         console.log(result)
       </script>
    </body>
 </html>

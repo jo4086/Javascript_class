@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function mul1() {
+            var a = 2
+            var b = 3
+
+            return a * b
+            // 리턴시 함수 종료 그러므로 밑에 console.log써도 출력 안됌
+
+            console.log(mul1()) // << 출력 안됌
+
+            // 아래쪽 리턴값인 console.log 존재해야 return 사용시 밑에 값을 반환시킴
+         }
+
+         function mul2(a, b) {
+            console.log(`mul2: ${a*b}`)
+         }
+
+         function mul3() {
+            var a = 2
+            var b = 3
+            console.log(`mul3: ${a*b}`)
+         }
+
+         function mul4() {
+            var a = 2
+            var b = 3
+            return a * b
+         }
+
+         console.log('mul1에서 곱한 결과:', mul1()) // 리턴값
+         mul2(2, 3) 
+         mul3()
+         mul4()
+         console.log(`mul4: ${mul4()}`)
+      </script>
+   </body>
+</html>

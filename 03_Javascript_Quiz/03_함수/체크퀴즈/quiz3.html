@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function employee(name) {
+            if (name == '김하나') {
+               return
+            }
+            console.log(`${name}은 관리부 직원 입니다.`)
+         }
+
+         employee('김지영')
+         employee('안상준')
+         employee('김하나')
+
+         // function에서 함수명인 employee를 순서대로 실행
+         // if문에서 매개변수 name을 지정했으며
+         // name = 김지영 / 안상준 / 김하나 순으로 실행
+         // if문에서 매개변수의 값이 '김하나'일 경우 true가 되어 if문을 실행, 그리고 리턴을 실행하여 if문을 종료시킴
+         // if문을 빠져나온 name은 김하나 이기에 console.log의 name은 김하나로 출력
+      </script>
+   </body>
+</html>

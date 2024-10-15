@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script></script>
-</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var a = ['국어', '영어', '수학', '국사']
+         // console.log(a)
+
+         let D
+         var list = a.map(function (e, i, a) {
+            return i
+         })
+
+            const ip = prompt('과입력')
+
+            if (ip !== a) {
+               document.write('성공')
+            } else {
+               document.write('ㅋㅋ')
+            }
+
+         
+         for (const item of a) {
+            console.log(item)
+            
+            if (a.indexOf(item) !== -1) {
+               document.write(item)
+            } else (
+               document.write('잘못입력')
+            )
+         }
+         
+         //  while (true) {
+         //     var name = prompt('과목 입력')
+         //     a.forEach(function (item, index, array) {
+         //        if (name !== a[index]) {
+         //         console.log(name)
+         //         // alert('과목 잘못 입력')
+         //        }
+         //     })
+
+         //  }
+
+         // console.log(a.lastIndexOf('국어'))
+         // console.log(a[0])
+         // while (true) {
+         //     var name = prompt('국어, 영어, 수학, 국사, 기타 중 과목을 입력')
+         //     if ()
+         // }
+      </script>
+   </body>
 </html>

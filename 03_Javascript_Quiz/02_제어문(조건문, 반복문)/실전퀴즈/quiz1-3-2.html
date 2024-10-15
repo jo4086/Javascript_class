@@ -29,22 +29,15 @@
                      const passlog = `학년: ${grade}학년\n점수: ${score}점\n합격여부: 합격`
                      const faillog = `학년: ${grade}학년\n점수: ${score}점\n합격여부: 불합격`
 
-                     if (grade == 4) {
-                        if (score >= 70) {
-                           document.write(pass)
-                           console.log(passlog)
-                        } else {
-                           document.write(fail)
-                           console.log(faillog)
-                        }
-                     } else if (grade >= 1 && grade <= 6) {
-                        if (score >= 60) {
-                           document.write(pass)
-                           console.log(passlog)
-                        } else {
-                           document.write(fail)
-                           console.log(faillog)
-                        }
+                     if (grade == 4 && score >= 70) {
+                        document.write(pass)
+                        console.log(passlog)
+                     } else if ((grade < 4 || grade > 4) && score >= 60) {
+                        document.write(pass)
+                        console.log(passlog)
+                     } else {
+                        document.write(fail)
+                        console.log(faillog)
                      }
                      break
                   }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const friends = [
+            {
+               name: '양주진',
+               age: 32,
+               job: '코인러',
+               married: false,
+            },
+            {
+               name: '오영제',
+               age: 32,
+               job: '랩퍼',
+               married: false,
+            },
+            {
+               name: '서준형',
+               age: 32,
+               job: '2년차 유부남',
+               married: true,
+            },
+         ]
+
+         // initialValue 설정X
+         const ageSum = friends.reduce((b, currentObject) => {
+            console.log(b + currentObject.age)
+            return b + currentObject.age
+         }, 0)
+         //  초기값 0을 주지 않으면 초기값이 첫번째 오브젝트 배열 자체가 초기값이 되므로 오브젝트+ 두번째 오브젝트내용이 더해져서 오류가남...
+
+         // 첫번째 콜백 실행
+         // accumulator = { name: '양주진', age: 32, job: '코인러', married: false }
+         // currentObject = { name: '오영제', age: 32, job: '랩퍼', married: false }
+         // currentObject.age = 32
+         // accumulator + currentObject.age = TypeError
+      </script>
+   </body>
+</html>

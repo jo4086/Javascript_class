@@ -7,16 +7,14 @@
    </head>
    <body>
       <script>
-         // 생각해 볼 문제2
-         var a = 1
-         function vartest(a) {
-            var a = a + 1
-            console.log(`function 안에서 a의 값: ${a}`)
+         // 생각해 볼 문제1
+         function vartest() {
+            var a = 2
          }
 
-         vartest(a)
+         vartest()
 
-         console.log(`전역에서의 a의 값${a}`)
+         console.log(a) // 출력 불가능
       </script>
    </body>
 </html>

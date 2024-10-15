@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열에서 짝수만 선택, 제곱한 결과 출력
+        let numbers = [1, 2, 3, 4, 5]
+
+        var result = numbers.filter((value) => value %2 === 0).map ((value) => value * value)
+
+        console.log(result)
+
+
+        var fitr = numbers.filter((num) => num % 2 === 0)
+        .map((square) => square*square)
+        .forEach((result) => console.log(result))
+        // console.log(fitr)
+
+    </script>
+    
+</body>
+</html>

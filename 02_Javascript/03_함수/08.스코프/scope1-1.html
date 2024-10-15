@@ -8,6 +8,17 @@
    <body>
       <script>
          // 생각해 볼 문제1
+
+         if (true) {
+            var abc = '123' // var로 선언하면 블록에 의한 범위 제한이 없음
+         }
+         console.log(abc) // 123
+
+         if (true) {
+            const def = '123' // const, let은 블록 스코프를 따름
+         }
+         console.log(def) // ReferenceError: abc is not defined
+
          function vartest() {
             var a = 2
          }

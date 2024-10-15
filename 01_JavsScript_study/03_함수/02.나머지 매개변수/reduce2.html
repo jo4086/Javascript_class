@@ -14,6 +14,8 @@
             return acc + cur
          },
          0) // <=초기값(arr) 이후 순차대로 arr의 0번부터 4번까지 순서대로 더함
+         // 초기값을 주지 않으면 첫번째 배열이 비어있게되어 type에러 발생!!
+
          // 0(arr) + 1(cur) : 0번째, acc에 값 저장
          // 1(acc) + 2(cur) : 1번째 array , acc에 1+2 저장
          // 3(acc) + 3(cur) : 2번째 array , acc에 3+3 저장
@@ -23,6 +25,7 @@
 
          // arr cur idx
          // 0 1 0
+         // acc cur idx
          // 1 2 1
          // 3 3 2
          // 6 4 3

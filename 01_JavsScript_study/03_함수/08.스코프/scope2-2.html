@@ -7,16 +7,16 @@
    </head>
    <body>
       <script>
-         // 생각해 볼 문제2
          var a = 1
+         var b = 2
          function vartest(a) {
-            var a = a + 1
-            console.log(`function 안에서 a의 값: ${a}`)
+            var a = a + b
+            console.log('지역변수 a:', a)
+            console.log('전역변수 b:', b)
          }
 
          vartest(a)
-
-         console.log(`전역에서의 a의 값${a}`)
+         console.log('전역변수 a:', a)
       </script>
    </body>
 </html>

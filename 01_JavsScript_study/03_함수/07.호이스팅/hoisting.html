@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         a()
+
+         function a() {
+            document.write(`호이스팅 가능<br>`)
+         }
+
+         // b()
+
+         // const b = function () {
+         //     document.write(`호이스팅 불가능`)
+         // }
+
+         hello()
+
+         function hello() {
+            document.write('hello<br>')
+         }
+         ;(function () {
+            document.write('hello world') // 즉시실행함수
+         })()
+         world()
+         const world = function () {
+            document.write('world') // 호이스팅 불가능,, 에러로인식
+         }
+      </script>
+   </body>
+</html>

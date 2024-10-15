@@ -7,16 +7,19 @@
    </head>
    <body>
       <script>
-         // 생각해 볼 문제2
-         var a = 1
-         function vartest(a) {
-            var a = a + 1
-            console.log(`function 안에서 a의 값: ${a}`)
+         function hello(a) {
+            a = '안녕하세요<br>'
+            document.write(a)
          }
 
-         vartest(a)
+         const world = () => document.write('안녕하세요')
 
-         console.log(`전역에서의 a의 값${a}`)
+         // document.write(hello)
+
+
+
+         hello()
+         world()
       </script>
    </body>
 </html>

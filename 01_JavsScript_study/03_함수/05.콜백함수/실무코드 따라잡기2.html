@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /* 
+            depts 배열은 A회사의 부서명 저장
+            이 회사부는 총 3개로 모두 '개발부'로 저장
+            개발부1, 2 ,3 ... 형태로 넘버링을 해 데이터를 다시 저장
+         */
+
+         const depts = ['개발부', '개발부', '연구부', '개발부', '인사부', '회계부', '마케팅부']
+
+         const filt = depts
+            .filter((name) => {
+               if (name.indexOf('개발부') !== -1) {
+                  return true
+               }
+            })
+            .map((num, ind) => num + ind)
+         console.log(`개발부서: ${filt}`)
+         // .forEach((list) => console.log(list))
+
+         const dap = ['개발부', '개발부', '연구부', '개발부', '인사부', '회계부', '마케팅부']
+
+         let i = 0
+         const ma = dap.map((numb) => {
+            if (numb.indexOf('개발부') !== -1) {
+               i++
+               return numb + i
+            } else {
+               return numb
+            }
+         })
+         console.log(ma)
+      </script>
+   </body>
+</html>

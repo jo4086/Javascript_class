@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printNumber(num, callback) {
+            console.log('printNumber() 함수의 num:', num)
+            callback(num)
+        }
+
+        // function squareNumber() {}
+
+        printNumber(5, function (num) {
+            console.log('squareNumber() 함수의 num:', num*num)
+        })
+
+                /* 
+        ▼ 아래처럼 압축가능
+
+        function sqareNumber(num) {
+            console.log('sqareNumber() 함수의 num:',num * num')
+        }
+        printNumber(5, squareNumber) ◀여기 sqareNumber에 function sqareNumber값 저장
+        
+        */
+
+        /* 
+        첫 function에서 함수명 printNumber의 두 매개변수,
+        num과 callback(이름 달라도댐)을 가져옴
+        
+        밑에서 printNumber의 첫 매개변수는 5
+        두번째매개변수는
+        function(num) {
+            console.log('sqareNumber() 함수의 num:',num * num')}
+        자체가 두번쨰 매개변수로
+        callback에 ㅣ동*/
+
+
+
+    </script>
+    
+</body>
+</html>

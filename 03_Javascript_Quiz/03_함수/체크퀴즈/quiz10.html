@@ -7,14 +7,15 @@
    </head>
    <body>
       <script>
-         let a = 0
+         const names = ['이', '김', '박', '김', '유', '정', '김']
 
-         for (i = 1; i < 20; i++) {
-            if (i % 2 == 0 || i % 3 == 0) {
-               a += i
+         const kim = names.filter(function (a) {
+            if (a.indexOf('김') !== -1) {
+               return a
             }
-         }
-         document.write(a)
+         })
+         console.log(kim)
+         document.write(kim)
       </script>
    </body>
 </html>

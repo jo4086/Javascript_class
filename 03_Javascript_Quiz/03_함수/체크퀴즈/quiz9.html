@@ -7,14 +7,13 @@
    </head>
    <body>
       <script>
-         let a = 0
+         const scores = [90, 80, 77, 20, 100]
 
-         for (i = 1; i < 20; i++) {
-            if (i % 2 == 0 || i % 3 == 0) {
-               a += i
-            }
-         }
-         document.write(a)
+         let ten = 10
+         const sum = scores.map(function (a) {
+            return ten + a
+         })
+         console.log(sum)
       </script>
    </body>
 </html>
