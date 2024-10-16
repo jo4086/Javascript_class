@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-   </head>
-   <body>
-      <script>
-         var num = 2.1234
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      var num = 2.1234;
 
-         var maxNum = Math.max(10, 5, 8, 30),
-            minNum = Math.min(10, 5, 8, 30),
-            roundNum = Math.round(num),
-            floorNum = Math.floor(num),
-            ceilNum = Math.ceil(num),
-            rndNum = Math.random(),
-            piNum = Math.PI
+      var maxNum = Math.max(10, 5, 8, 30)
+      var minNum = Math.min(10, 5, 8, 30)
+      var roundNum = Math.round(num)
+      var floorNum = Math.floor(num)
+      var ceilNum = Math.ceil(num)
+      var randomNum = Math.random()
 
-         var random = Math.floor(Math.random() * 8) + 1
+      var random = Math.floor(Math.random()*(10 - 5 + 1)) + 5;
+      // 0.5 / * (6) = 3.0 +5  
+      // 0.1 / * (6) = 0 + 5
+      // 0.9 / * 6 = 5.4 / 5 + 5
+      document.write(random, '<br>')
 
-         document.write(maxNum, '<br>')
-         document.write(minNum, '<br>')
-         document.write(roundNum, '<br>')
-         document.write(floorNum, '<br>')
-         document.write(ceilNum, '<br>')
-         document.write(rndNum, '<br>')
-         document.write(piNum, '<br>')
-         document.write(random, '<br>')
-      </script>
-   </body>
+
+      document.write('최대값: ',maxNum, '<br>')
+      document.write('최솟값: ',minNum, '<br>')
+      document.write('반올림: ',roundNum, '<br>')
+      document.write('내림: ',floorNum, '<br>')
+      document.write('올림: ',ceilNum, '<br>')
+      document.write('랜덤값: ',randomNum, '<br>')
+      console.log('랜덤값은 0~1사이로만 나오나')
+
+      
+   </script>
+   
+</body>
 </html>

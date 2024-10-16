@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script></script>
+   </head>
+   <body>
+      <script>
+         console.log(Math.min(10, 323, 39, 40, 12, 49, 40, 3, 15))
+         document.write(`Math.min을 이용한 최솟값: ${Math.min(10, 323, 39, 40, 12, 49, 40, 3, 15)}<br><br>`)
+
+         // for문 이용
+         var numbers = [10, 323, 39, 40, 12, 49, 40, 3, 15];
+         console.log(numbers[0])
+
+         for (const number of numbers) {
+            let index = numbers[0]
+
+            if( index > number) {
+               index = number
+            console.log(index)
+            document.write(`for문 최솟값 출력: ${index}<br><br>`)
+            }
+         }
+
+         // 스프레드 이용
+         var nums = [10, 323, 39, 40, 12, 49, 40, 3, 15]
+         console.log(Math.min(...nums))
+         document.write(`스프레드 최솟값 출력: ${Math.min(...nums)}<br><br>`)
+
+         console.log(Math.min(10, 323, 39, 40, 12, 49, 40, 3, 15))
+         var numbs = (10, 2, 8, 40, 12, 49, 40, 3, 15)
+
+         // for문 작동 분석
+         let c = nums[0]
+         for (const a of nums) {
+            console.log('저장값c: ',c)
+            console.log('비교값a: ',a)
+            if (c-a <=0 ) {
+               console.log('true값: ',c-a)
+               console.log('')
+            } else {
+               console.log('false값: ',c-a)
+               c = a
+               console.log('최솟값c 갱신: ',c)
+               console.log('')
+            }
+            
+         }
+         console.log('')
+         console.log('출력c: ',c)
+         document.write('for문 작동원리 최솟값: ',c,'<br><br>')
+         console.log('')
+         
+
+      </script>
+   </body>
+</html>

@@ -87,8 +87,8 @@
                   year: 2019,
                   genre: ['좀비', '사극'],
                   episodes: 6,
-                  //   cast: ['주지훈', '류승룡'],
-                  cast: ['주지훈', '류승룡', '배두나'],
+                  cast: ['주지훈', '류승룡'],
+                  // cast: ['주지훈', '류승룡', '배두나'],
                   synopsis: '조선 시대에 퍼진 좀비 역병을 막기 위한 왕자의 투쟁을 다룬 이야기.',
                },
             ],
@@ -98,97 +98,47 @@
 
          // 1. 드라마 제목, 줄거리, 주연배우만 모두 출력해 주세요.
 
-         // ▼ 기본형
-         //   dramas.forEach((a) => {
-         //      console.log(`제목: ${a.title} \n줄거리: ${a.synopsis} \n주연배우: ${a.cast[0]},${a.cast[1]}`)
-         //   })
+         dramas.forEach((drama) => {
+            document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast[0]},${drama.cast[1]}</p>`)
+         })
 
-         //  dramas.forEach((drama) => {
-         //     document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast[0]},${drama.cast[1]}</p>`)
-         //  })
-
-         console.log('Q.[1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야 할까?]')
-         /* Q. [1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야 할까?]
-             ▶ step1) map을 사용해 결과를 바로 출력해줍니다. */
-
-         // ▼ 먼저 .map과 화살표함수, return이 표현된 식
-         //   dramas.forEach((a) => {
-         //      console.log(`제목: ${a.title} \n줄거리: ${a.synopsis} \n주연배우: ${a.cast.map((b) => {
-         //          return b
-         //      })}`)
-         //   })
-
+         // 1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야 할까요? - step1
+         // map을 사용해 결과를 바로 출력해줍니다.
          /*
          dramas.forEach((drama) => {
             document.write(
-               `<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast.map( (actor) => { return actor } )  }</p>`
+               `<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast.map((actor) => {
+                  return actor
+               })}</p>`
             )
          })
          */
 
-         /*** 
-              ▶ step2) 필요없는 중괄호나 return 구문등을 정리 */
-         // ▼ 수정된 식
-         dramas.forEach((a) => {
-            console.log(`제목: ${a.title} \n줄거리: ${a.synopsis} \n주연배우: ${a.cast.map((b) => b)}`)
-         })
-
+         // 1번 문제에서 드라마마다 주연배우 인원이 다르면 어떻게 출력해야 할까요? - step2
+         // 필요없는 중괄호나 return 구문등을 정리합니다.
          /*
          dramas.forEach((drama) => {
-            document.write(
-            `<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast.map( (actor) => actor) } </p>`)
+            document.write(`<p>제목: ${drama.title} | 줄거리: ${drama.synopsis} | 주연배우: ${drama.cast.map((actor) => actor)}</p>`)
          })
          */
 
-         console.log('')
-         console.log('Q2. [드라마 장르 중 판타지에 해당하는 드라마 제목만 출력해 주세요.]')
+         // 2. 드라마 장르 중 판타지에 해당하는 드라마 제목만 출력해 주세요. - step1
+         document.write(`<hr />`)
+         document.write(`<h2>판타지 드라마</h2>`)
 
-         // Q2. [드라마 장르 중 판타지에 해당하는 드라마 제목만 출력해 주세요.]
-         //    ▶ step1)
-         //  document.write(`<hr />`)
-         //  document.write(`<h2>판타지 드라마</h2>`)
-
-         //  const result1 = dramas.filter((drama) => {
-         //     const genres = drama.genre
-
-         //     for (const fantasy of genres) {
-         //         if (fantasy === '판타지') {
-         //             return true
-         //         }
-         //     }
-         //  })
-         //  const result2 = result1.map((drama) => {
-         //     console.log(`${drama.title}`)
-         //  })
-
-
-         //    ▶ step2) map을 이어서 체이싱
          const result1 = dramas.filter((drama) => {
-            const genres = drama.genre
-
-            for (const fantasy of genres) {
-               if (fantasy === '판타지') {
-                  return true
-               }
-            }
-         }).map((drama) => {
-            console.log(`${drama.title}`)
-         })
-
-         /*          const result1 = dramas.filter((drama) => {
-            장르 배열 저장 ex) ['좀비', '사극'] 이런 형태
-            const genres = drama.genre
+            const genres = drama.genre //장르 배열 저장 ex) ['좀비', '사극'] 이런 형태
 
             for (const genre of genres) {
                if (genre === '판타지') {
                   return true
                }
             }
-         }) */
+         })
 
-         //  const result2 = result1.map((drama) => {
-         //     document.write(`<p>${drama.title}</p>`)
-         //  })
+         const result2 = result1.map((drama) => {
+            document.write(`<p>${drama.title}</p>`)
+         })
 
          // 2. 드라마 장르 중 판타지에 해당하는 드라마 제목만 출력해 주세요. - step2
          // 이런 경우 함수의 체이닝을 해주는 편이 더 낫습니다.

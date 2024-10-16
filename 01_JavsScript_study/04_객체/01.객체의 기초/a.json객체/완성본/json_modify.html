@@ -13,29 +13,26 @@
             age: 1,
             family: ['신짱구', '신짱아', '봉미선', '신형만'],
             walk: function () {
-               console.log(this.name + '는 산책중 입니다.')
+               console.log(this.name + '는 산책 중 입니다.')
             },
          }
-         // 객체의 값 바꾸기
 
-         // 첫번째 방법 :  dog.name = '검둥이'
-         /* 두번째 방법 */ dog['name'] = '검둥이'
+         //객체의 값 바꾸기
+         dog.name = '검둥이' //흰둥이 -> 검둥이로 바뀜
+         // 혹은 dog['name'] = '검둥이'
          console.log(dog)
 
-         console.log('')
+         console.log('-----------------------')
 
-         // 객체 내부의 배열 바꾸기
+         //객체 내부의 배열 바꾸기
          dog.family[0] = '짱구'
          dog.family[1] = '짱아'
-         /* 또는
-         dog['family'][0] = '짱구'
-         dog['family'][1] = '짱아'
-         */
+         // 혹은 dog['family'][0] = '짱구'
+         // 혹은 dog['family'][1] = '짱아'
          console.log(dog)
 
-         console.log('')
-
-         // 객체 내부의 함수 바꾸기
+         console.log('-----------------------')
+         //객체 내부의 함수 바꾸기
          dog.walk = function () {
             console.log(this.name + '는 노는 중 입니다.')
          }

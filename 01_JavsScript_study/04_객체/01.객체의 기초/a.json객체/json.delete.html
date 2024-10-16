@@ -16,30 +16,21 @@
                console.log(this.name + '는 산책중 입니다.')
             },
          }
-         // 객체의 값 바꾸기
 
-         // 첫번째 방법 :  dog.name = '검둥이'
-         /* 두번째 방법 */ dog['name'] = '검둥이'
+         //  객체 내부의 일반 속성 값 삭제
+         delete dog.age
          console.log(dog)
 
-         console.log('')
-
-         // 객체 내부의 배열 바꾸기
-         dog.family[0] = '짱구'
-         dog.family[1] = '짱아'
-         /* 또는
-         dog['family'][0] = '짱구'
-         dog['family'][1] = '짱아'
-         */
+         // 객체 내부의 배열 속성 값 삭제
+         delete dog.family[0]
          console.log(dog)
 
-         console.log('')
+         delete dog.family
+         console.log(dog)
 
-         // 객체 내부의 함수 바꾸기
-         dog.walk = function () {
-            console.log(this.name + '는 노는 중 입니다.')
-         }
-         dog.walk()
+         // 객체 내부의 함수 삭제
+         delete dog.walk
+         console.log(dog)
       </script>
    </body>
 </html>

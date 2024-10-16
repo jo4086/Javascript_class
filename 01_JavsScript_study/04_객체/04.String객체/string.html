@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-   </head>
-   <body>
-      <script>
-         var t = 'Hello Thank you good luck to you'
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      var t = 'Hello Thank you good luck to you you'
 
-         for (i in t) {
-            document.write(`(${t[i]}) `)
-         }
-         document.write('<br>', t.charAt(16), '<br>')
-         document.write(t.indexOf('you'), '<br>')
-         document.write(t.indexOf('you', 16), '<br>')
-         document.write('=======================', '<br>')
-         document.write(t.search('you'), '<br>')
-         document.write(t.substring(6, 12), '<br>')
-         document.write('=======================', '<br>')
-         document.write(t.replace('you', 'me'), '<br>')
-         document.write(t.length, '<br>')
+      for (i in t) {
+         document.write(`${t[i]}: [${i}]<br>`)
+      }
 
-         var s = t.split(' ')
-         console.log(s)
-         document.write(s[0], '<br>')
-         document.write(s[4], '<br>')
-      </script>
-   </body>
+      console.log(t.charAt(16))
+      console.log(t.replace('you','기준',5))
+
+
+      // 찾는 문자가 있는 인덱스 번호
+      console.log(t.indexOf('you'))
+      console.log(t.indexOf('you',16))
+
+      console.log('')
+      console.log(t.search('you'))
+
+      // 문자열을 잘라내는 함수
+      console.log(t.substring(7,14))
+
+      console.log('')
+      console.log(t.replace(/you/g,'me'))
+      console.log(t.replace(/you|good/g, function myFunction(x) {return 'hi' }))
+
+      var s = t.split(' ')
+      console.log(s)
+   </script>
+   
+</body>
 </html>

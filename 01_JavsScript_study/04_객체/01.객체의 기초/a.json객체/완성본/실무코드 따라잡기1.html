@@ -93,57 +93,56 @@
          }
 
          const dramas = data.result
-         console.log('드라마',dramas)
 
          // JSON 객체 데이터 출력해보기
-         console.log('객체 데이터 0번', dramas[0])
-         console.log('객체 데이터 1번', dramas[1])
-         console.log('객체 데이터 2번', dramas[2])
+         console.log(dramas[0])
+         console.log(dramas[1])
+         console.log(dramas[2])
          console.log('-------------------------')
 
          // 드라마 제목, 년도 출력해보기
-         console.log('드라마 제목: ', dramas[0].title, '\n출시년도: ', dramas[0].year)
-         console.log('드라마 제목: ', dramas[1].title, '\n출시년도: ', dramas[1].year)
-         console.log('드라마 제목: ', dramas[2].title, '\n출시년도: ', dramas[2].year)
+         console.log(dramas[0].title, dramas[0].year)
+         console.log(dramas[1].title, dramas[1].year)
+         console.log(dramas[2].title, dramas[2].year)
          console.log('-------------------------')
 
          // 드라마 제목, 장르 출력해보기
-         console.log('드라마 제목: ', dramas[0].title, '\n장르: ', dramas[0].genre)
-         console.log('드라마 제목: ', dramas[1].title, '\n장르: ', dramas[1].genre)
-         console.log('드라마 제목: ', dramas[2].title, '\n장르: ', dramas[2].genre)
+         console.log(dramas[0].title, dramas[0].genre)
+         console.log(dramas[1].title, dramas[1].genre)
+         console.log(dramas[2].title, dramas[2].genre)
          console.log('-------------------------')
 
          // 드라마 제목, 주연배우 한명만 출력해보기
-         console.log('드라마 제목: ', dramas[0].title, '\n주연배우: ', dramas[0].cast[0])
-         console.log('드라마 제목: ', dramas[1].title, '\n주연배우: ', dramas[1].cast[0])
-         console.log('드라마 제목: ', dramas[2].title, '\n주연배우: ', dramas[2].cast[0])
+         console.log(dramas[0].title, dramas[0].cast[0])
+         console.log(dramas[1].title, dramas[1].cast[0])
+         console.log(dramas[2].title, dramas[2].cast[0])
          console.log('-------------------------')
 
          // 드라마 주연배우 추가 후 확인하기
-         dramas[0].cast.push('!권나라')
-         dramas[1].cast.push('!서지혜')
-         dramas[2].cast.push('!조현철')
+         dramas[0].cast.push('권나라')
+         dramas[1].cast.push('서지혜')
+         dramas[2].cast.push('조현철')
 
-         console.log('추가된 주연배우 목록: ', dramas[0].cast)
-         console.log('추가된 주연배우 목록: ', dramas[1].cast)
-         console.log('추가된 주연배우 목록: ', dramas[2].cast)
+         console.log(dramas[0].cast)
+         console.log(dramas[1].cast)
+         console.log(dramas[2].cast)
          console.log('-------------------------')
 
          // 이태원 클라쓰 시놉시스 수정하기
          dramas[0].synopsis =
             '불합리한 세상 속, 고집과 객기로 뭉친 청춘들의 힙한 반란이 시작된다. 세계를 압축해 놓은 듯한 이태원. 이 작은 거리, 각자의 가치관으로 자유를 쫓는 그들의 창업 신화 <이태원 클라쓰>'
-         console.log('시놉시스 수정',dramas[0])
+         console.log(dramas[0])
          console.log('-------------------------')
 
          // 킹덤 장르 '좀비' -> '공포' 로 수정하기
          dramas[9].genre[0] = '공포'
-         console.log('킹덤의 좀비장르 공포장르로 수정',dramas[9])
+         console.log(dramas[9])
 
          console.log('-------------------------')
 
          // 킹덤에 시놉시스 삭제하기
          delete dramas[9].synopsis
-         console.log('킹덤 시놉시스 제거',dramas[9])
+         console.log(dramas[9])
       </script>
    </body>
 </html>
