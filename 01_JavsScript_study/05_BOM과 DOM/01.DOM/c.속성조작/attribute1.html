@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+   </head>
+   <body>
+      <!-- picsum.photos 홈페이지는 뒤에 width과 height값을 입력하면 해당 크기의 랜덤 이미지를 불러옴 -->
+      <img class="rect" src="https://picsum.photos/400/250" alt="랜덤이미지" />
+
+      <script>
+         const rect = document.querySelector('.rect')
+         const src = rect.getAttribute('src') // src속성의 값을 가져온다
+         const alt = rect.getAttribute('alt') // alt속성의 값을 가져온다
+         const clas = rect.getAttribute('class') // class속성의 값을 가져온다
+
+         console.log('이미지 경로:', src)
+         console.log('이미지 설명:', alt)
+         console.log('이미지 설명:', clas)
+      </script>
+   </body>
+</html>

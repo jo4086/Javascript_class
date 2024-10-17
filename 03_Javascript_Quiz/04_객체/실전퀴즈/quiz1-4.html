@@ -22,6 +22,40 @@
                age: 23,
             },
          ]
+         const b = console.log(Object.values(arr))
+         console.log(Object.keys(arr))
+         arr.forEach(function (a) {
+            // console.log('포이치',a)
+            console.log('a네임',a.name)
+            console.log('a',a)
+            // const b = a.
+
+            if ((a.name = '장수민')) {
+               console.log(`${a.name}의 학점은 ${a.grade}입니다.`)
+            }
+         })
+         // 장수민의 학점은 B+ 입니다.
+         var keys = Object.keys(arr)
+         for (var i = 0; i < keys.length; i++) {
+            var key = keys[i]
+            console.log(arr[key])
+            const c = arr[key]
+
+            for (const a in arr[key]) {
+               console.log(a)
+            }
+         }
+
+         var values = Object.values(arr)
+         for (var i = 0; i < values.length; i++) {
+            var key = values[i]
+            console.log(arr[key])
+            const c = arr[key]
+
+            for (const a in arr[key]) {
+               console.log(a)
+            }
+         }
       </script>
    </head>
    <body></body>

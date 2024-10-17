@@ -10,7 +10,11 @@
          const textarea = document.querySelector('textarea')
          const h1 = document.querySelector('h1')
 
-         textarea.addEventListener('keyup', (event) => {
+
+         // keyup : 키에서 땔 떄 갱신
+         // keydown : 누를때마다 갱신
+         // keypress : 입력하고 엔터 누르면 갱신
+         textarea.addEventListener('keydown', (event) => {
             const length = textarea.value.length
             h1.textContent = `글자 수: ${length}`
          })

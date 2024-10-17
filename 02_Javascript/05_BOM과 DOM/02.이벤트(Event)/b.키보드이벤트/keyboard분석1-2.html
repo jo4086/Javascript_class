@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <textarea id="my-textarea"></textarea>
+      <script>
+         function submitTextarea(event) {
+            let key = event.key || event.keyCode
+
+            // 엔터는 true값 and 쉬프트는 false값일때 작동됌
+            // 즉 쉬프트는 누르지 않고 엔터만 누를 때 if문이 작동하며
+            if ((key === 'Enter' && !event.shiftKey) || (key === 13 && key !== 16)) {
+                //아래 event.preventDefault()로 엔터시 새 라인 추가를 막고 바로 전송시키게함
+               //  없다면 전송하고나서 새 줄이 생성된다.
+               event.preventDefault()
+               alert('전송')
+               return false
+            }
+         }
+
+         // keydown 이벤트에 달아주었습니다.
+         let textarea = document.getElementById('my-textarea')
+         textarea.addEventListener('keydown', (event) => submitTextarea(event))
+      </script>
+   </body>
+</html>

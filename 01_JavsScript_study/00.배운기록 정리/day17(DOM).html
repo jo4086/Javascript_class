@@ -1,0 +1,41 @@
+<script>
+   /*
+────────────────────────────────────────────────────
+    DOM : Document Obhect Model
+        - 문서 객체 모델을 다루는 함수
+        - 웹페이지의 요소(Element)를 자바스크립트에서 사용할 수 있는 객체료 표현 한 것
+        - DOM TREE 기반
+────────────────────────────────────────────────────
+    요소 선택
+    - querySelector(선택자) : 1개의 요소 선택 (CSS와 똑같은 선택자 사용)
+    - querySelectorAll(선택자) : 여러개의 요소 선택
+
+    글자 조작
+    - 해당객체.textContent: 입력된 문자열 삽입
+    - 해당객체.innerHTML : 입력된 문자열을 HTML형식으로 삽입
+
+    스타일 조작
+    -해당객체.style.css속성명 : 속석 값 지정. (속성명은 카멜 표기법)
+    (text-align : textAlign)
+    (Font-size : fontSize)
+    \\(color) : Color
+
+    속성 조작
+    - 객체.setAttribute('이름') :  특정 속성에 값을 지정
+    - 객체.getAttribute('속성이름')  : < 특정 속성값 추출
+        => src, alt, class, id 등등
+
+    태그 조작
+        document.createElement (문서객체 이름) : 문서 객체(요소) 생성
+        부모객체.apprendChild (자식 책체) : 부모 객체(요소) 하위에 자식 객체(요소) [추가]
+        부모객체.removeChiled (문서 객체) : 부모 객체(요소) 하위에 자식 객체(요소) [삭제]
+        해당객체.remove() : 해당 객체(요소) 제거
+
+        div : 부모객체
+        ├────────┬────────┐
+        h1      div      h2 : 형제 객체
+        ┌────────┼────────┐
+        li      li       li : 자식 객체
+
+    */
+</script>

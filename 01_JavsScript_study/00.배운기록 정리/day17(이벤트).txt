@@ -1,0 +1,98 @@
+■■ 이벤트(Event) 함수
+
+▼ 이벤트 실행
+적용할개체명.addEventListener(이벤트 이름, 콜백함수)
+
+▼ 이벤트 제거
+적용할개체명.removeEventListener(이벤트 이름, 콜백함수)
+
+ES6 이전
+적용개체.addEventListener('이벤트종류', function() {
+    이벤트 발생시 코드
+})
+
+ES6 화살표 함수 이후
+적용개체.addEventListener('이벤트종류, () => {
+    이벤트 발생시 코드
+})
+────────────────────────
+■■ 이벤트의 target 차이
+.target : 이벤트가 실제로 발생한 요소를 타겟함, (자식요소에서 이벤트 발생 시 자식요소 가져옴)
+
+.currentTarget : 이벤트 리스너가 등록된 요소를 타겟
+────────────────────────
+■■ 이벤트 막기 : event.preventDefault()
+
+■ 이미지 우클릭 막기
+예시
+const imgs = document.querySelectorAll('img')
+
+imgs.forEach((img) => {
+    이름.addEventListener('contextmenu',(event) => {
+        event.preventDefault()
+    })
+})
+
+■ 링크 이동
+예시
+<a href="https://www.naver.com/">네이버</a>
+
+let status = false
+
+const link = document.querySelector('a')
+link.addEventListener('click', (event) => {
+    event.preventDefault
+    alert('링크 이동 금지!')
+})
+────────────────────────
+[on]태그 속성으로 이벤트 실행하기
+[on] + 이벤트명 태그 속성으로 이벤트 실행함
+
+
+────────────────────────
+이벤트 종류
+1. 마우스 이벤트
+click : 마우스를 클릭할 때
+dbclick : 마우스를 더블클릭 할 때
+mousedown : 마우스버튼을 누르고 있을 때
+mouseup : 눌렀던 마우스 버튼을 뗄 때
+mousemove : 마우스를 움직일 때 터치스크린(X)
+mouseover : 요소위로 마우스를 움직였을 때 터치스크린(X)
+mouseout : 요소 바깥으로 마우스를 움직였을 때 터치스크린(X)
+mouseenter : 특정 영역 안으로
+mouseleave : 특정 영역 밖으로
+
+2. 키보드 이벤트
+keydown : 키가 눌릴 때 실행. (꾹 누르거나 입력 될 때도)
+keypress : 키가 입력되었을 때
+keyup : 키를 뗼 때
+
+>> 키보드 이벤트 발생시 boolean 값 반환
+속성명
+설명
+-----
+code
+입력한 키
+keyCode
+입력한 키를 눌렀는지
+altKey
+alt키를 눌렀는지
+ctrlKey
+ctrl키를 눌렀는지
+shiftKey
+shift키를 눌렀는지
+>>
+
+
+3. Focus 이벤트
+focus / focusin : 포커스를 얻을 때
+blur / focusout : 잃을 때
+
+4. UI 이벤트
+resize : 브라우저 화면의 크기가 변할 때
+load : 페이지가 가지고 있는 모든 요소가 전부 로드 되었을 때
+scroll : 스크롤을 움직일 떄
+
+5. Form 이벤트
+change : select, 체크박스, 라디오버튼의 상태가 변경될 떄
+submit : 사용자가 폼에 입력한 값을 서버로 전달할 떄

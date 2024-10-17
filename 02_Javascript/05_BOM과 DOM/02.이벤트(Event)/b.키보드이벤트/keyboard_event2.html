@@ -13,11 +13,12 @@
             output += `alt: ${event.altKey}<br>`
             output += `ctrl: ${event.ctrlKey}<br>`
             output += `shift: ${event.shiftKey}<br>`
-            output += `code: ${typeof event.code !== 'undefined' ? event.code : event.keyCode}<br>`
+            output += `code: ${typeof event.code !== 'undefined' ? event.keyCode : event.keyCode}<br>`
             h1.innerHTML = output
          }
 
          document.addEventListener('keydown', print)
+         // 키업을 쓴 이유 : alt, ctrl, shift키는 뗏다가 눌렀을 때 false값을 주기 위해서
          document.addEventListener('keyup', print)
       </script>
    </body>

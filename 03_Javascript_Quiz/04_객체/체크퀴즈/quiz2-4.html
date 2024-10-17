@@ -18,29 +18,14 @@
          검색한 단어: ${student.substring(start_num, start_num + length)}<br><br>`)
          console.log('')
 
-         // 아래는 테스트용,,
-         let d = ''
-         for (i in student) {
-            document.write(`| ${student[i]} | : [${i}]<br>`)
-            if (student[i] === '이' || student[i] === '미' || student[i] === '라') {
-               console.log('함수출력', student[i])
-               d += student[i]
-            }
-         }
-         console.log(d)
+         const students = student.split(', ')
+         console.log(student.split(','))
 
-         console.log(student.indexOf('이미라'))
-         console.log(student.charAt())
+         for (const i in students) {
+            s= Number(i)+1
+            console.log(`${s}번째 학생: ${students[i]}`)
+         }
       </script>
    </head>
    <body></body>
 </html>
-
-<script>
-   function str(names) {
-      const name = ['이', '미', '라']
-      if (name.includes(names)) {
-         console.log()
-      }
-   }
-</script>
