@@ -9,6 +9,26 @@
       <script>
          const prices = [3, 5, 2]
          const quantities = [10, 7, 5]
+         let p = 0
+
+         prices.forEach((e, i) => {
+            console.log(`----${i + 1}번째 순회 시작----`)
+            console.log(`${i}번째 물건가격: ${e}`)
+            quantities.forEach((quantitie, index) => {
+               console.log(`각 물건 문자열위치: ${quantitie}개인 물건 = ${index}`)
+               console.log(`가격 문자열번호 : ${i}            \n물건 문자열번호 : ${index}\n비교: ${i == index}`)
+               if (i == index) {
+                  console.log(`true일 때 수량 * 가격 계산: ${e * quantitie}`)
+                  p += e * quantitie
+                  console.log(`▶ ${i + 1}번째 순회의 누적p값 : ${p}`)
+               }
+               console.log(``)
+            })
+         })
+         document.write(`최종 계산값: ${p}`)
+         console.log(`최종 계산값: ${p}`)
+
+         // 열심히 하고나서 정답 보니까 깜짝 놀랐네요,,
       </script>
    </body>
 </html>

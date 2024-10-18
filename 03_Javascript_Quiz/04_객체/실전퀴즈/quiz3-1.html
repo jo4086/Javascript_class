@@ -36,6 +36,15 @@
                },
             ],
          }
+
+         console.log(data.user)
+         console.log(data.user.hobbies)
+         data.user.hobbies.forEach((i, b) => {
+            console.log(`${b + 1} ${i}`)
+            document.write(`${b + 1} ${i}<br>`)
+         })
+
+         
       </script>
    </body>
 </html>

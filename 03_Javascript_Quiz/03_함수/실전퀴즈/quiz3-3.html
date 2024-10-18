@@ -10,6 +10,35 @@
       <script>
          const height = 180
          const weight = 80
+
+         // var best_body = (height-100)*0.9
+         // var BMI = 10000 * weight/((height*height)/10000)
+
+         function best_body(h, w) {
+            var value = (h - 100) * 0.9
+            return value
+         }
+
+         function BMI(h, w) {
+            var value = ((10000 * weight) / (h * h)).toFixed(2)
+
+            if (value >= 40) {
+               return (value += '<br>비만판단결과: 고도비만')
+            } else if (value >= 30) {
+               return (value += '<br>비만판단결과: 비만')
+            } else if (value >= 25) {
+               return (value += '<br>비만판단결과: 과체중')
+            } else if (value >= 20) {
+               return (value += '<br>비만판단결과: 정상')
+            }
+            return (value += '<br>비만판단결과: 저체중')
+         }
+
+         document.write(`키 ${height}cm의 적정 몸무게는 ${best_body(height, weight)}kg입니다.<br>`)
+         document.write(`적정BMI: ${BMI(height, weight)}<br><br>`)
+
+         console.log(best_body(height, weight))
+         console.log(BMI(height, weight))
       </script>
    </body>
 </html>

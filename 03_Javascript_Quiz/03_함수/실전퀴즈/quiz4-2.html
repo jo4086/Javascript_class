@@ -9,6 +9,13 @@
       <script>
          const roles = ['user', 'admin', 'user', 'admin']
          const emails = ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'david@example.com']
+
+
+         const result = roles
+         .map((name,index) => (name === 'admin' ? emails[index] : null))
+         .filter((a) => a !== null)
+
+         console.log(result)
       </script>
    </body>
 </html>
