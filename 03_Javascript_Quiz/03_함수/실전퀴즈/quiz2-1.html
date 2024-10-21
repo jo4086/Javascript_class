@@ -4,23 +4,22 @@
     <title></title>
     <script>
       // 변수를 선언합니다.
-      let numbers = [273, 52, 103, 32, 57, 24, 76]
+      let numbers = [273, 52, 103, 32, 57, 24, 76];
 
       // 처리합니다.
       // (1) 홀수만 추출
-      const odd = numbers.filter((a) => a%2 !== 0)
-      console.log(odd)      
+      const odd = numbers.filter((a) => a % 2 !== 0);
+      console.log(odd);
       // (2) 100 이하의 수만 추출
-      const hund = odd.filter((a) => a <= 100 )
-      console.log(hund)
+      const hund = odd.filter((a) => a <= 100);
+      console.log(hund);
 
       // (3) 5로 나눈 나머지가 0인 수만 추출
-      const rest5 = hund.filter((a) => a%5 === 0 )
-      console.log(rest5)
+      const rest5 = hund.filter((a) => a % 5 === 0);
+      console.log(rest5);
 
       // 출력합니다.
     </script>
   </head>
-  <body></body> 
+  <body></body>
 </html>
- 

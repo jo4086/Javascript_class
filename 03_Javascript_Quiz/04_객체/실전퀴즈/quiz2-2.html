@@ -31,6 +31,44 @@
                email: 'lsh@student.com',
             },
          ]
+         const input = prompt('학생 이름을 입력하세요')
+
+         // const test = '서우혁'
+         var 값 = ''
+
+         const 맵 = arr.map((a, b) => {
+            // console.log(a.name)
+            const { age, ...agedelete } = a
+            // console.log('age키 제거', agedelete)
+            // console.log(agedelete)
+
+            if (agedelete.name === input) {
+               Object.keys(agedelete)
+               const value = Object.values(agedelete)
+               // console.log(value)
+               // console.log(`${agedelete.name}, ${agedelete.grade}, ${agedelete.email}`)
+               document.write(`내부에서 출력<br>${agedelete.name}, ${agedelete.grade}, ${agedelete.email}<br>-----<br>`)
+               document.write(`${value.toString()}<br>`)
+               // console.log(Object.keys(agedelete))
+               // console.log(Object.values(agedelete))
+            }
+            for (const key in a) {
+               if (key === 'name') {
+                  // console.log(key)
+                  // console.log(a[key])
+               }
+               // console.log(key)
+               if (key === 'email') {
+                  // console.log(key)
+                  let len = a[key].search('@')
+                  let gnt = a[key].substring(0, len)
+                  // console.log(`${a[key].substring(0, len)}\n`)
+                  // mail += `${a[key].substring(0, len)}\n`
+                  return gnt
+               }
+            }
+         })
+         document.write(값)
       </script>
    </head>
    <body></body>

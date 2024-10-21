@@ -23,9 +23,27 @@
             },
          ]
 
-         const student = arr[1]
+         const array = arr.map(function (i,b,c) {
+            // console.log(i.name)
+            
+            var f = arr[b]
+            // console.log(f)
+            f.name === '장수민'? i=f : i = null
+            // console.log('map: ',i)
+            return i
+         })
+         .filter(function(a){
+            // console.log('')
+            console.log(a)
+            if (a === null) {
+               false
+               return a
+            } true
+            return a
+         })
 
-         console.log(`${student.name}의 학점은 ${student.grade} 입니다`)
+         console.log('')
+         console.log(array)
       </script>
    </head>
    <body></body>

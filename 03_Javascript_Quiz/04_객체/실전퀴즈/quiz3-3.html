@@ -36,6 +36,14 @@
                },
             ],
          }
+
+         const sales = data.products.map((i,d,a) => {
+            console.log(i.price*0.9)
+            const sale = i.price*0.9
+            return (`${i.productName}: ${sale.toLocaleString('ko-KR')}원`)
+         }).forEach((i) => {
+            console.log(i)
+         })
       </script>
    </body>
 </html>

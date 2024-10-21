@@ -8,49 +8,31 @@
    <body>
       <script>
          var a = ['국어', '영어', '수학', '국사']
-         // console.log(a)
 
-         let D
-         var list = a.map(function (e, i, a) {
-            return i
-         })
+         const input = prompt('과목입력')
 
-            const ip = prompt('과입력')
-
-            if (ip !== a) {
-               document.write('성공')
-            } else {
-               document.write('ㅋㅋ')
-            }
-
-         
-         for (const item of a) {
-            console.log(item)
-            
-            if (a.indexOf(item) !== -1) {
-               document.write(item)
-            } else (
-               document.write('잘못입력')
-            )
+         switch (input) {
+            case a[0]:
+               document.write(`${a[0]}: 03`)
+               console.log(`${a[0]}: 03`)
+               break
+            case a[1]:
+               document.write(`${a[1]}: 02`)
+               console.log(`${a[1]}: 02`)
+               break
+            case a[2]:
+               document.write(`${a[2]}: 01`)
+               console.log(`${a[2]}: 01`)
+               break
+            case a[3]:
+               document.write(`${a[3]}: 04`)
+               console.log(`${a[3]}: 04`)
+               break
+            default :
+               document.write('기타: 00')
+               console.log('기타: 00')
+               break
          }
-         
-         //  while (true) {
-         //     var name = prompt('과목 입력')
-         //     a.forEach(function (item, index, array) {
-         //        if (name !== a[index]) {
-         //         console.log(name)
-         //         // alert('과목 잘못 입력')
-         //        }
-         //     })
-
-         //  }
-
-         // console.log(a.lastIndexOf('국어'))
-         // console.log(a[0])
-         // while (true) {
-         //     var name = prompt('국어, 영어, 수학, 국사, 기타 중 과목을 입력')
-         //     if ()
-         // }
       </script>
    </body>
 </html>

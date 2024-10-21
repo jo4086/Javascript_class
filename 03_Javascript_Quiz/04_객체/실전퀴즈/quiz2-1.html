@@ -31,6 +31,43 @@
                email: 'lsh@student.com',
             },
          ]
+         console.log(`방법1`)
+         arr.forEach((info, index) => {
+            let check = info.email.split('@')
+            console.log(check[0])
+         })
+         console.log('')
+
+         console.log(`방법2`)
+         arr.forEach((info, index) => {
+            let iof = info.email.indexOf('@')
+            console.log(info.email.substring(0, iof))
+         })
+         var mail = ''
+
+         console.log('')
+
+         console.log(`방법3 내부 출력`)
+         const 맵 = arr.map((a, b) => {
+            for (const key in a) {
+               if (key === 'email') {
+                  let len = a[key].search('@')
+                  let gnt = a[key].substring(0, len)
+                  console.log(`${a[key].substring(0, len)}\n`)
+                  mail += `${a[key].substring(0, len)}\n`
+                  return gnt
+               }
+            }
+         })
+
+         console.log('')
+         console.log(`방법4 콘솔로그 하나에 모두 출력\n${mail}`)
+
+         console.log('')
+         console.log('방법5 콘솔로그 외부로 출력')
+         for (const five of 맵) {
+            console.log(five)
+         }
       </script>
    </head>
    <body></body>

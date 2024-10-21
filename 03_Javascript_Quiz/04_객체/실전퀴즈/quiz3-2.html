@@ -36,6 +36,11 @@
                },
             ],
          }
+         data.products.filter((i,d,a) => {
+            if(i.inStock === true) {
+               console.log(`${i.productName}: ${i.price.toLocaleString('ko-KR')}`)
+            }
+         })
       </script>
    </body>
 </html>
