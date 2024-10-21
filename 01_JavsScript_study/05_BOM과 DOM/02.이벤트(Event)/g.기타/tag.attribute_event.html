@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button onclick="test1()">클릭</button>
+      <input type="text" onkeyup="test2(e)" />
+
+      <script>
+         function test1() {
+            alert('click 이벤트!')
+         }
+
+         function test2(e) {
+            const inputValue = e.target.value
+            alert(inputValue)
+         }
+      </script>
+   </body>
+</html>

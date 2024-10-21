@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" /> inch <br />
+      <button>계산</button>
+      <p></p>
+
+      <script>
+         const input = document.querySelector('input')
+         const button = document.querySelector('button')
+         const p = document.querySelector('p')
+
+         button.addEventListener('click', (e) => {
+            // 인풋창의 값을 가져옴 ( 간단하게 .value로 가능)
+            const inch = Number(input.value)
+
+            // isNaN으로 inch가 숫자인지 판단
+            // 문자면 true / 숫자면 false이기에 문자를 입력시 아래 문구가 출력된다.(true)
+            if (isNaN(inch)) {
+               p.textContent = '숫자를 입력해주세요'
+
+               // 함수를 종료
+               // 사용자가 잘못 입력했으면 밑에는 굳이 실행시킬 필요가 없기에 여기서 끊어버림
+               return
+            } else {
+               p.textContent = `${inch * 2.54}cm입니다.`
+            }
+
+            // return을 썻기에 else를 안써도 됌
+            // else가 있다는건 return도 안해도 되긴하는데 컴퓨터 자원을 아끼기 위해서 return을 쓰는것 같다.
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+   </head>
+   <body>
+      <h1></h1>
+
+      <script>
+        //  const h1 = document.querySelector('h1')
+        //  const print = (event) => {
+        //     let output = ''
+        //     output += `alt: ${event.altKey}<br>`
+        //     output += `ctrl: ${event.ctrlKey}<br>`
+        //     output += `shift: ${event.shiftKey}<br>`
+        //     output += `code: ${typeof event.code !== 'undefined' ? event.keyCode : event.keyCode}<br>`
+        //     h1.innerHTML = output
+         
+        const print = (event) => {
+            console.log(event)
+            // 이벤트 객체: 이벤트가 발생했을 때 이벤트가 발생한 요소에 대한 정보가 들어있다.
+            // ▶ alt키를 누를 때 true
+            console.log(event.altKey)
+
+            // ▶ 컨트롤키를 누를 때 true
+            console.log(event.ctrlKey)
+
+            // ▶ shift키를 누를 때 true
+            console.log(event.shiftKey)
+
+            // 키보드 값을 위치랑 같이 줌
+            console.log(event.code)
+
+            // ▶ 실행X, 사용X
+            console.log(event.keyCode)
+
+            // 키보드 값 자체를 준다.
+            console.log(event.key)
+        }
+
+        // 문서 전체에 이벤트를 줌
+        document.addEventListener('keydown',print)
+        
+
+
+
+        //  console.log(eve.altkey)
+         document.addEventListener('keydown', print)
+         // 키업을 쓴 이유 : alt, ctrl, shift키는 뗏다가 눌렀을 때 false값을 주기 위해서
+         document.addEventListener('keyup', print)
+      </script>
+   </body>
+</html>

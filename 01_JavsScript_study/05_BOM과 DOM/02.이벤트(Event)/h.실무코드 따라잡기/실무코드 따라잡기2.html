@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" />
+      <p></p>
+      <script>
+         const input = document.querySelector('input')
+         const p = document.querySelector('p')
+
+         //  이메일인지 판단하는 함수
+         const isEmail = (value) => {
+            // 골뱅이를 갖으며, 골뱅이 뒤에 점이 있으면 이메일 형식
+
+            // 내 방식 : 골뱅이 뒤에 점의 위치를 @ 문자열 값으로부터 2번째 지난 위치부터 .을 검색, 이게 -1라면 .이 없으니까 걸러냄
+            // return value.indexOf('@') > 1 && value.indexOf('.', value.indexOf('@')+2) > -1
+
+            // 다른 방식 : split로 @의 앞뒤로 잘라내서 배열형식으로 저장시킴
+            // 배열에서 [0]은 @ 앞쪽이니까 [1]로 설정
+            // @의 뒤쪽부터 .의 문자열이 1보다 작으면 @.~ 형식이라 불가능하므로 [위치 >= 1]로 설정함
+            return value.indexOf('@') > 1 && value.split('@')[1].indexOf('.') >= 1
+         }
+
+         input.addEventListener('keyup', (event) => {
+            const value = event.currentTarget.value
+            if (isEmail(value)) {
+               p.style.color = 'green'
+               p.textContent = `이메일 형식입니다: ${value}`
+            } else {
+               p.style.color = 'red'
+               p.textContent = `이메일 형식이 아닙니다: ${value}`
+            }
+         })
+      </script>
+   </body>
+</html>

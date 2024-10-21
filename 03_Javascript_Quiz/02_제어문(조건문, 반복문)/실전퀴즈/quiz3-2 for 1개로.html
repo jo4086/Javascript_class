@@ -7,15 +7,17 @@
    </head>
    <body>
       <script>
-         for (let num = 0; num < 5; num++) {
-            let sum = ''
-            for (let gap = 0; gap < num; gap++) {
-               sum += ' '
-            }
-            for (let star = 5; star > num; star--) {
-               sum += '*'
-            }
+         var gap = ''
+         var ss = '*'
+         var sum = ''
+         for (i = 5; i > 0; i--) {
+            ss='*'.repeat(i)
+            // console.log(ss)
+            sum = gap + ss
             console.log(sum)
+            gap += ' '
+
+            // console.log(gap)
          }
       </script>
    </body>

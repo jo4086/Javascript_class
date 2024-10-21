@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         var result = ''
+         for (let a = 1; a < 5; a++) {
+            let b = ''
+
+            const star = a * 2 - 1
+            // console.log(star)
+
+            // console.log(a)
+            for (let x = 4 - a; x > 0; x--) {
+               b += ' '
+            }
+
+            for (let y = 1; y <= star; y++) {
+               b += '*'
+            }
+            console.log(b)
+         }
+      </script>
+   </body>
+</html>

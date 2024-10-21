@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="parent">
+         <button id="child">클릭</button>
+      </div>
+
+      <script>
+         const parent = document.querySelector('#parent')
+
+         parent.addEventListener('click', (e) => {
+            // [target], [currentTarget] 모두 실행은 같지만
+            // [target]은 실제로 발생한 요소를 가져옴
+            // [currentTarget]은 이벤트에 걸려있는 요소를 가져옴
+
+            /* 위에서는 [#parent]를 연결시켜서 이벤트를 발생시키게 했지만
+            실제로 이벤트를 발생시키는 원인은 [button]이기에 [target]은 button을 가리킨다. */
+             console.log('e.target: ', e.target.id)
+             console.log('e.currentTarget: ', e.currentTarget.id)
+         })
+      </script>
+   </body>
+</html>

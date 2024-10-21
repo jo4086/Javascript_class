@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <a href="https://www.naver.com">네이버</a>
+
+      <script>
+         /* 여기서 [let status = false]는 따로 작동방식을 하기 위해서 만든것같음 */
+         let status = false
+
+         const link = document.querySelector('a')
+         link.addEventListener('click', (e) => {
+            e.preventDefault()
+            alert('링크 이동 금지')
+         })
+      </script>
+   </body>
+</html>

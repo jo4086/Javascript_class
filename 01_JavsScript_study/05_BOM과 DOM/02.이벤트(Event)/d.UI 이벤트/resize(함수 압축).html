@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h3>브라우저 창의 크기를 변경해보세요</h3>
+      <div id="info">현재 창 크기: <span id="size"></span></div>
+
+      <script>
+         const sizeInfo = document.getElementById('size')
+
+         //  function updateSize() {
+         // const width = window.innerWidth
+         // const height = window.innerHeight
+         // sizeInfo.textContent = `${width}px * ${height}px`
+         //  }
+
+         // 함수를 분리해서 사용함
+         // window : 브라우저 창을 가리키며,, 브라우저창의 resize => 창의 크기변경 이벤트를 말함
+         window.addEventListener('resize', () => {
+            const width = window.innerWidth
+            const height = window.innerHeight
+            sizeInfo.textContent = `${width}px * ${height}px`
+         })
+
+        // 이건 왜 높이 갱신이 안되는지??
+      </script>
+   </body>
+</html>
