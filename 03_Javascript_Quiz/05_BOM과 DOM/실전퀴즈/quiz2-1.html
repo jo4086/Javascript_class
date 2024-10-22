@@ -43,6 +43,16 @@
          const pw = document.querySelector('#password')
          const idMsg = document.querySelector('.id-msg')
          const pwMsg = document.querySelector('.pw-msg')
+
+         button.addEventListener('click', (e) => {
+            if (id.value == '' || pw.value == '') {
+               id.value == '' ? (idMsg.style.display = 'block') : (idMsg.style.display = 'none')
+               pw.value == '' ? (pwMsg.style.display = 'block') : (pwMsg.style.display = 'none')
+            } else {
+               idMsg.style.display = 'none'
+               pwMsg.style.display = 'none'
+            }
+         })
       </script>
    </body>
 </html>

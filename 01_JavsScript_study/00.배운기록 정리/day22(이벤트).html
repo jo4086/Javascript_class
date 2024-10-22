@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1></h1>
+    <ul id="list">
+        <li id="id"></li>
+    </ul> -->
+    <script>
+        const input =document.querySelector('#id')
+        input.addEventListener('keyup', (evnet) => {
+            console.log(evnet) // 발생한 이벤트에 대한 정보
+            console.log(evnet.target.value) // 입력한 값을 가져옴
+            console.log(evnet.currentTarget.value) // 입력한 값을 가져오나
+
+            console.log(input.value) // 입력한 값을 가져온다.
+        })
+        
+        // 발생한 이벤트에 대한 정보
+        console.log(evnet)
+    </script>
+    
+</body>
+</html>

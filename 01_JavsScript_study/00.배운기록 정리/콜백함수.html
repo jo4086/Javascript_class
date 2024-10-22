@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /*
+        여기서 printNumber(a, 콜백)은 밑의 모든 printNumber를 호이스팅함 (비익명함수)
+        
+        이때 a = 5,10 / 콜백 = function(y), function(d)가 오게되며
+        
+        풀어서쓴다면
+        
+        function printNumber(5, functoin (x) {
+            console.log('num * num', x * x)
+            })
+
+        function printNumber(10, function (y) {
+            console.log('num * num', y * y)
+            })
+
+        로 각각 한번씩 가져와서 작동된다.    
+        
+        이를 줄인다면
+        const printNumber = (a, 콜백) => {
+            console.log('printNumber() 함수의 num :', a)
+            }
+        가 될 것 같다 */
+
+         const printNumber = (a, 콜백) => console.log('printNumber() 함수의 num :', a)
+
+         //   function printNumber(a, 콜백) {
+         //      console.log('printNumber() 함수의 num :', a)
+         //      console.log(콜백)
+         //      콜백(a)
+         //   }
+
+         printNumber(5, function (x) {
+            console.log('num * num: ', x * x)
+         })
+
+         printNumber(10, function (y) {
+            console.log('num * num: ', y * y)
+         })
+
+         // const test = (num) => {
+         //    console.log('num * num: ', num * num)
+         // }
+
+         // printNumber(5, test)
+      </script>
+   </body>
+</html>

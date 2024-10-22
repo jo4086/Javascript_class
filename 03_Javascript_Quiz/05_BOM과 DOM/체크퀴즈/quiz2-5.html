@@ -6,6 +6,26 @@
       <title>Document</title>
    </head>
    <body>
+      <!-- <label for="fruits">과일을 선택하세요:</label>
+      <select id="fruits">
+         <option value="apple">사과</option>
+         <option value="banana">바나나</option>
+         <option value="orange">오렌지</option>
+      </select>
+
+      <div id="result">선택된 과일: apple</div>
+
+      <script>
+         const options = document.querySelectorAll('option')
+         const result = document.querySelector('#result')
+
+         for (const option of options) {
+            option.addEventListener('change', (e) => {
+               result.textContent = `선택된 과일은 ${e.target.value}`
+            })
+         }
+      </script> -->
+
       <label for="fruits">과일을 선택하세요:</label>
       <select id="fruits">
          <option value="apple">사과</option>
@@ -15,6 +35,14 @@
 
       <div id="result">선택된 과일: apple</div>
 
-      <script></script>
+      <script>
+         const seLect = document.querySelector('#fruits')
+         const result = document.querySelector('#result')
+
+         seLect.addEventListener('change', (e) => {
+            const setvalue = e.target.value
+            result.textContent = `선택 과일의 속성은 ${setvalue}입니다.`
+         })
+      </script>
    </body>
 </html>

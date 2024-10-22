@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         console.log('■ 심볼형이란\n자바스크립트에서 객체의 프로퍼티 key(속성명)에는 오로지 문자형과 심볼형 2가지만 사용 할 수 있다.\n\n그중 심볼형은 유일성이 보장되는 자료형으로 설명이 동일한 심볼을 여러개 만들어도 각 심볼값은 다르다.')
+         let id1 = Symbol('id')
+         let id2 = Symbol('id')
+         console.log(`    ex) let id1 = Symbol("id")\n        let id2 = Symbol("id")\n\n     => result = [${id1 == id2}]`)
+         console.log('▶ 심볼형의 특징\n=> 문자형으로 자동 형 변환이 되지 않음\n   문자열이 아니여도 alert(기타 자료형들)을 사용하면 대부분 출력되나\n   심볼형은 에러가 발생\n   => 심볼명.toString()으로 수동적으로 문자열 형태로 바꿔야한다')
+      </script>
+   </body>
+</html>

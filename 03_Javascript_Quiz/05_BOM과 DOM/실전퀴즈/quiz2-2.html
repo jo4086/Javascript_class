@@ -24,6 +24,10 @@
          const op2 = document.querySelector('#op2')
          const selectBox = document.querySelector('#oper')
          const answer = document.querySelector('#answer')
+
+         selectBox.addEventListener('change', (e) => {
+            answer.textContent = Number(op1.value)  Number(op2.value)
+         })
       </script>
    </body>
 </html>

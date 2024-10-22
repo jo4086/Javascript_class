@@ -8,6 +8,15 @@
    <body>
       <div id="myDiv" style="width: 100px; height: 100px; background-color: lightgray">여기에 마우스를 올려보세요</div>
 
-      <script></script>
+      <script>
+         const div = document.querySelector('#myDiv')
+
+         div.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'yellow'
+         })
+         div.addEventListener('mouseout', (e) => {
+            e.target.style.backgroundColor = 'lightgray'
+         })
+      </script>
    </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let dog = {
+            name: '[이름 : 흰둥이]',
+            owner: '[주인 : 짱구]',
+            family: ['[소유가족: ', '(신짱구', '신짱아', '신형만', '봉미선)]'],
+            age: '[나이 : 1]',
+
+            walk: function () {
+               console.log(this.name + '는 산책중입니다.')
+            },
+            // 화살표 함수 표현식은 this가 없기 때문에 메서드로 사용할 수 없다.
+            // ▼ 예시
+            rest: () => console.log(this.name + '는 휴식중입니다. => Error, 화살표 함수는 메서드로 사용 불가능'),
+            // 아래 경우는 run이 key값이 되는 동시에 run() {}이 value값이 된다.
+            run() {
+               console.log(this.name + '는 달리는중입니다.')
+            },
+         }
+
+         console.log('점 표기법\ndog.name:', dog.name)
+         console.log('[대괄호 접근법](브라캣 연산자)\ndog["name"]:', dog['name'])
+         console.log(dog.owner)
+         console.log(dog.family)
+         // 콘솔에서 [,]로 이으면 뒷부분 앞에 공백이 생김
+         // 콘솔에서 +로 이으면 공백없이 이어짐
+         console.log('점 표기법\ndog.age: ' + dog.age)
+         console.log('[대괄호 접근법](브라캣 연산자)\ndog["age"]: ' + dog['age'])
+         console.log('')
+
+         dog.walk()
+         dog.rest()
+         dog.run()
+
+         console.log('')
+         console.log('분리한 콘솔로그\ndog의 key값\n', Object.keys(dog))
+         console.log(`백틱 콘솔로그\ndog의 key값: [${Object.keys(dog)}]`)
+         console.log(`백틱 콘솔로그\ndog의 key길이: [${Object.keys(dog).length}]`)
+         console.log('')
+         console.log('분리한 콘솔로그\ndog의 value값\n', Object.values(dog))
+         console.log(`백틱 콘솔로그\ndog의 value값: [${Object.values(dog)}]`)
+         console.log('dog의 key 길이(length): ', Object.keys(dog).length)
+
+         console.log(Object.keys(dog)[0])
+         console.log(dog[Object.keys(dog)[0]])
+         // console.log(dog.walk())
+         // console.log(dog.rest())
+      </script>
+   </body>
+</html>

@@ -11,6 +11,21 @@
 
       <script>
          //작성
+         const herfs = document.querySelectorAll('a')
+
+         // .forEach문으로 작성한 방법
+         herfs.forEach((e, i, a) => {
+            if (i == 1) {
+               e.setAttribute('target', '_blank')
+            }
+         })
+
+         // ▼ for - in 문으로 작성한 방법
+         // for (const num in herfs) {
+         //    if (num == 1) {
+         //       herfs[num].setAttribute('target', '_blank')
+         //    }
+         // }
       </script>
    </body>
 </html>
