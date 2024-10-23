@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const contacts = {
+            familyName: '이',
+            name: '영희',
+            age: 22,
+         }
+
+         // es6 버전의 비구조화 할당 이용
+         // 아래의 변수 세 줄을 한 줄로 요약시키는 기능으로 추가 할 내용이 많을 수록 효율적
+         // let이 안되어서 var로 바꿨다,, Why??
+         var { familyName, name, age } = contacts
+         console.log(familyName, name, age)
+
+         // 변수명을 새롭게 쓰고싶을 때
+         // 기존 (변수명: 새로운 변수명) 구조로 작성
+         // 결과는 같게 나온다.
+         var { familyName, name: otherName, age: otherAge } = contacts
+         console.log(familyName, otherName, otherAge)
+         // ▼ es6 이전 버전에서 사용했던 방법
+         // let familyName = contacts.familyName
+         // let name = cotacts.name
+         // let age = contacts.age
+
+         const arr = ['광희', '지수', '영철', 20]
+
+         // ▼ 배열속 요소들을 하나씩 변수로 할당하려고 하면 너무 많아짐.
+         /*
+         let value1 = arr[0]
+         let value2 = arr[1]
+         let value3 = arr[2]
+         */
+
+         // 구조: (각 변수명을 적용할 위치에 변수명 작성, = 배열명)
+         let [value1, value2, value3] = arr
+         console.log(value1, value2, value3)
+      </script>
+   </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const student = {
+            name: '김라라',
+            age: 17,
+            subject: {
+               kor: 87,
+               math: 70,
+               eng: 63,
+               science: 89,
+            },
+            addr: '서울시 종로구 계동길 777',
+            phone: '010-7777-7777',
+            reg_date: '2024/01/14',
+         }
+         const subject = student.subject
+         const scores = [subject.kor]
+
+         for (i = 1; i <= 3; i++) {
+            scores[i] = Object.values(subject)[i]
+         }
+         scores[4] = 85
+
+      </script>
+   </body>
+</html>

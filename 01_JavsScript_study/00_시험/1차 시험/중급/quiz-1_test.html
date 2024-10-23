@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const student = {
+            name: '김라라',
+            age: 17,
+            subject: {
+               kor: 87,
+               math: 70,
+               eng: 63,
+               science: 89,
+            },
+            addr: '서울시 종로구 계동길 777',
+            phone: '010-7777-7777',
+            reg_date: '2024/01/14',
+         }
+         const subject = student.subject
+         const scores = [subject.kor]
+         //  scores[1] = subject.math
+         //  scores[2] = subject.eng
+         //  scores[3] = subject.science
+
+         //  console.log(Object.keys(subject))
+         for (i = 1; i <= 3; i++) {
+            scores[i] = Object.values(subject)[i]
+         }
+         scores[4] = 85
+
+         console.log(scores)
+         console.log(`1번 문제 정답: ${scores}`)
+
+         let sum = Number()
+         scores.forEach((e) => {
+            sum += e
+         })
+
+         const avg = Math.round(sum / 5)
+         // console.log(typeof(avg))
+         // console.log(String(avg))
+
+         // console.log(avg)
+         student['avg'] = avg
+         console.log(`4번 문제 정답: ${JSON.stringify(student, null, 3)}`)
+
+         subject['kor_history'] = 85
+
+         console.log(`5번 문제 정답: ${JSON.stringify(student, null, 3)}`)
+
+         avg < 0 || avg > 100 ? alert('점수 에러입니다.') : avg >= 90 ? (student.grade = 'A') : avg >= 80 ? (student.grade = 'B') : avg >= 70 ? (student.grade = 'C') : avg >= 60 ? (student.grade = 'D') : (student.grade = 'F')
+         console.log(`6번 문제 정답: ${JSON.stringify(student, null, 3)}`)
+
+         const date = new Date(2024,1,14)
+         console.log(date.getFullYear(),date.getMonth(),date.getDate())
+         
+      </script>
+   </body>
+</html>
