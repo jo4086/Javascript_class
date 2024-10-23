@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const dog1 = {
+            이름: '구름',
+            나이: 6,
+            종족: '강아지',
+         }
+         const dog2 = {
+            ...dog1,
+            이름: '별',
+            나이: 1,
+            예방접종: true,
+         }
+
+         console.log('결과 예상하기\n =>dog2는 스프레드 문법으로 dog1의 프로퍼티를 가져옴\n=> 후에 콤마로 이름, 나이, 예방접종이라는 key를 부여했으므로\n=> 모든 정보를 포함할 것')
+         console.log('dog1의 속성: ', JSON.stringify(dog1, null, 6))
+         console.log('dog2의 속성: ', JSON.stringify(dog2, null, 6))
+         console.log('실제 결과로는 스프레드 문법 뒤에 같은 속성명(key)들은 value가 수정됌\n=> 이유 : JSON객체에서 key는 중복 할 수 없으므로 key의 value값이 수정되며\n=> 예방접종(key)는 새로운 key이므로 추가된다.')
+      </script>
+   </body>
+</html>

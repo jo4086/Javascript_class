@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         console.log('%c■ throw\n', 'font-weight:bold;', '=> 사용자가 에러조건을 임의로 설정하여 강제로 발생시키는 키워드\n\n▼ 아래는 예시입니다.')
+         console.log('')
+         function sum(x, y) {
+            if (typeof x !== 'number' || typeof y !== 'number') {
+               console.log('!!▶ throw키워드 위쪽에 있는 콘솔입니다.\n')
+               throw '여긴 throw 입니다.\n    숫자를 입력하세요\n    throw아래의 콘솔은 출력되지 않습니다.'
+               console.log('출력되지 않음')
+            }
+            return x + y
+         }
+
+         console.log(sum('abc', 1))
+      </script>
+   </body>
+</html>

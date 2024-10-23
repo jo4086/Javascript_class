@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+        //  const func = async () => {
+        //     try {
+        //        const value = await someFunc()
+        //        const result = await anotherFunc()
+        //        return result
+        //     } catch (err) {
+        //        throw err
+        //     }
+        //  }
+         const makeError = async () => {
+            throw new Error('에러 클래스에 의한 에러')
+         }
+
+         const withTryCatch = async () => {
+            try {
+               console.log('try-cath 를 사용한 async')
+               const result = await makeError()
+               console.log('withTryCatch - 에러가 발생하는 위치 아래에 있는 코드 (실행되면 안됨)')
+               return result
+            } catch (err) {
+               throw err
+            }
+         }
+
+         const withoutTryCatch = async () => {
+            console.log('try-cath 없는 async')
+            const result = await makeError()
+            console.log('withoutTryCatch - 에러가 발생하는 위치 아래에 있는 코드 (실행되면 안됨)')
+            return result
+         }
+
+         withTryCatch()
+            .then((res) => {
+               console.log('withTryCatch - 성공결과', res)
+            })
+            .catch((err) => {
+               console.log('withTryCatch - 실패결과', err.message)
+            })
+
+         withoutTryCatch()
+            .then((res) => {
+               console.log('withoutTryCatch - 성공결과', res)
+            })
+            .catch((err) => {
+               console.log('withoutTryCatch - 실패결과', err.message)
+            })
+      </script>
+   </body>
+</html>

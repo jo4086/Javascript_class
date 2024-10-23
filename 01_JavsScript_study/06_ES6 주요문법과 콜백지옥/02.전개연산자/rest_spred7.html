@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const dog1 = {
+            이름: '구름',
+            나이: 6,
+            종족: '강아지',
+         }
+         const dog2 = {
+            이름: '별',
+            나이: 1,
+            예방접종: true,
+            ...dog1,
+         }
+         console.log('결과 예상하기\n=> dog2에 중복되는 key명을 먼저쓰고 후에 스프레드 문법으로 덮었으므로\n=> dog2는 dog1과 같은 이름과 나이를 가지게 되며\n=> 예방접종(key)은 없는 속성이므로 이것만 추가될 것')
+
+         console.log('dog1 속성: ', JSON.stringify(dog1))
+         console.log('dog2 속성: ', JSON.stringify(dog2))
+      </script>
+   </body>
+</html>

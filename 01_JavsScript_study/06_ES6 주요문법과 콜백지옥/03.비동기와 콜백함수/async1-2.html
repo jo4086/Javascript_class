@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 비동기 사례
+         console.log('동기적으로 구현되었다면 출력 순서는\n\nHello\nsetTimeout 3초 출력\nHello Agn\n\n순으로 출력이 되어야하나\n\n실제로는 즉시 작동이되는 [Hello],[Hello Agn]를 먼저 출력\n이후에 [setTimeout]이 작동')
+         console.log('Hello')
+
+         // setTimeout()이 비동기의 대표
+         //  setTimeout(() => {
+         //     console.log('여기는 비동기\n3초가 지났습니다.\nBye')
+         //  }, 3000)
+
+         console.log('Hello Agn')
+         console.log('')
+         console.log('아래는 동기로 변환')
+
+         console.log('▼ 동기로 바꾸는 방법\n=> 콜백 함수 사용하기')
+
+         /* 
+            작동원리
+            1. function sayGoodbye가 먼저 실행 => 3초 스타트
+            2. console.log('Hello')를 출력
+            3. callback에 () => {console.log('Hello Age')}저장
+            4. setTimeout()에서 3초가 지나자 bye가 출력되고
+            5. 아래에 콜백 [() => {console.log('Hello Age')}]가 출력
+        */
+         function sayGoodbye(callback) {
+            setTimeout(() => {
+               console.log('bye')
+               callback()
+            }, 3000)
+         }
+         console.log('Hello')
+
+         sayGoodbye(() => {
+            console.log('Hello Age')
+         })
+      </script>
+   </body>
+</html>

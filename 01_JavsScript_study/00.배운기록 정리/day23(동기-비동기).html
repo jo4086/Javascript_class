@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /* 
+        자바스크립트의 작동방식
+        => 동기(Synchronous), 단일 스레드(싱글 스레드)
+        이에 대한 예시로
+        console.log
+
+         */
+
+         /* 
+         비동기를 동기로 바꾸는 작업에서 콜백함수를 사용했으나
+         계속해서 순차작동을 시키기 위해서 함수안에 콜백을 계속해서 넣으면
+         함수가 너무 길어지고 지저분해지는 문제(가독성) 발생 (콜백 지옥)
+
+         ▶ 이를 해결하기 위해서 새로운 작동방식 개발
+            => promise와 async / await
+            => promise(객체) : .then으로 함수의 실행 순서를 정함
+                         그러나 callback처럼 함수들이 많아질수록 작성하기 어렵고 가독성이 떨어짐
+            => async, await : 둘은 한쌍으로 [promise], [callback]보다 작성방법도 쉽고 가독성이 좋음
+                              BUT 완전히 해결 할 순 없으므로 [promise]와 [callback]을 적절히 섞어서 사용해야한다. 
+          */
+
+         /*
+         ■■ 콜백지옥 예시
+            function add(x, callback) {
+                let sum = x + x
+                console.log(sum)
+                callback(sum)
+                }
+
+            add(2, (res) => {
+                add(4, (res) => {
+                    add(8, (res) => {
+                        console.log('finish: ' + res)
+                        })
+                    })
+                })
+             */
+
+             /*
+             ■■ promise 객체
+             특징: promise자체는 비동기 / promise 내부는 동기적으로 작동
+                   그러므로 promise 외부에 다른 코드가 있다면 먼저 실행
+                   (비동기 메서드에서 동기 메서드처럼 값을 반환하는 것)
+
+             promise의 3가지 상태
+             => 대기(pending) : 이행, 거부 작동 전 초기 상태
+             => 이행(fulfilled) : 연산 성공
+             => 거부(rejected) : 연산 실패
+
+             promise는 이행 또는 거부될 때 프로미스의 then 메서드에 의해 대기열(큐)에 추가된 처리들을 호출
+
+             then / cathch(에러 걸러내기)로 이어쓰며
+             후에 홈페이지 만들 때 사용할 것
+                         
+              */
+
+              /*  */
+      </script>
+   </body>
+</html>
