@@ -8,19 +8,36 @@
    <body>
       <script>
          /* 콜백 지옥 */
-/*          function add(x, callback) {
+         /* 
+            function add(x, callback) {
             let sum = x + x
             console.log(sum)
             callback(sum)
-         }
+            }
 
-         add(2, (res) => {
-            add(4, (res) => {
-               add(8, (res) => {
-                  console.log('finish: ' + res)
+            add(2, (res) => {
+               add(4, (res) => {
+                  add(8, (res) => {
+                     console.log('finish: ' + res)
+                  })
                })
             })
-         }) */
+         */
+
+         /* then(promise)지옥 예시 */
+         /* 
+         getData()
+            .then(result => {
+             return getMoreData(result)
+                  .then(moreResult => {
+                    return getEvenMoreData(moreResult)
+                      .then(evenMoreResult => {
+                        console.log(evenMoreResult);  // 결과 처리
+                        // 추가적인 then 중첩...
+                      });
+                  });
+              });
+          */
       </script>
    </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+      <script>
+         function test1(arr) {
+            if (arr[0] !== undefined) {
+               console.log(arr[0], '값 존재')
+            } else {
+               throw new Error('a배열의 0번 인덱스를 지정하지 않았습니다.')
+               // throw 'a배열의 0번 인덱스를 지정하지 않았습니다.'
+               // throw new Error()
+            }
+         }
+
+         function test2(arr) {
+            if (arr[0] !== undefined) {
+               console.log(arr[0], '값 존재')
+            } else {
+               // throw new Error('a배열의 0번 인덱스를 지정하지 않았습니다.')
+               // throw 'a배열의 0번 인덱스를 지정하지 않았습니다.'
+               throw new Error()
+            }
+         }
+
+         // 여기서 test1은 위쪽에서 에러 받은걸 catch에서 console.log로 받은 문구를 출력시키기에 아래쪽이 실행된다.
+         try {
+            test1([]) // 빈 배열을 매개변수로 전달
+         } catch (exception) {
+            console.log(exception)
+            // throw new Error(exception)
+            // throw new Error('a배열의 0번 인덱스를 지정하지 않았습니다.')
+         }
+         console.log('test1 = 완료')
+
+         // 여기서 test2는 위쪽에서 에러를 받은걸 catch에서 throw로 에러를 발생시켜서 아래쪽을 중단.
+         try {
+            test2([]) // 빈 배열을 매개변수로 전달
+         } catch (exception) {
+            // console.log(exception)
+            // throw new Error(exception)
+            throw new Error('a배열의 0번 인덱스를 지정하지 않았습니다.')
+         }
+         console.log('test2 = 작동X')
+      </script>
+   </head>
+   <body></body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+          /*
+          ■■ 예외(exception)는 소프트적 오류를 뜻하며
+          유저가 임의로 오류조건을 만들어 발생시킬 수 있다.
+
+          이는 try-catch-finally 문으로 실행시킬 수 있으며
+          비동기의 동기적 작업을 도와주는 async:await에 결합하여 에러처리를 할 수 있다.
+          (자주사용)
+          */
+
+          /*
+          ■■ 예외 처리를 할때 throw 키워드를 사용하면 소프트적 예외를 일으키는거같다.
+             throw로 에러를 일으키면 밑으로는 실행X
+
+          ▶ throw 키워드 사용법
+          => 1. throw new [예외 클래스 생성자]
+             이때 throw new 뒤에 적은 내용들이 메세지로 출력되며
+              ▼ 출력 스타일
+              ▶ exception_basic4.html:22 Uncaught ReferenceError: 에러 is not defined
+                at [에러위치]
+
+          => 2. throw new Error(메세지)
+              ▼ 출력 스타일
+              ▶ exception_basic4.html:21 Uncaught Error: 에러입니다.
+                at [에러위치]
+
+          ■■■■■■■■■■■■■■■■■■[throw new]여러가지 실험■■■■■■■■■■■■■■■■■■■
+          ■■ A. throw new '내용'
+              ┌────────────────────────────────
+              │ ▶ Uncaught TypeError:"내용"
+              │   at (에러위치출력)
+              └────────────────────────────────
+             : 콘솔로그처럼 따옴표,따옴표 형식으로 이어서 쓸 수 없고 첫번째 따옴표 내용만 나온다.
+
+          ■■ B. throw new 내용 ■■▶(잘못된 작성방식)
+              ┌───────────────────────────────
+              │ ▶ Uncaught ReferenceError:내용
+              │   at (에러위치출력)
+              └────────────────────────────────
+             : 에러내용을 띄어쓰면 시스템상 에러가 발생해버린다.
+
+          ■■ C. throw new Error('내용')
+              ┌───────────────────────────────
+              │ ▶ Uncaught Error:내용
+              │   at (에러위치출력)
+              └────────────────────────────────
+
+          ■■ D. throw new Error(내용) ■■▶(잘못된 작성방식)
+              ┌───────────────────────────────
+              │ ▶ Uncaught ReferenceError:내용
+              │   at (에러위치출력)
+              └────────────────────────────────
+             : Error() 안에 따옴표를 쓰지 않으면 [throw new 내용]과 똑같은 스타일로 나온다.
+
+             ReferenceError라는건 개발자가 실수를 하여 나타나는 실제 오류로
+             내가 임의로 만든것이 아니란건데
+             throw위치에서 일부러 저렇게해도 어차피 그부분은 오류가 날 부분이라 상관없긴 하다.
+             그래도 문법에 맞춰 꼭 '따옴표' 안에 작성하자
+
+
+
+          ■■ [throw '내용']만 단독 사용시 at(에러위치출력)은 나오지 않고 Uncaught ~Error만 나온다
+          ■■ [throw Error('내용')] 형식을 사용해여 'at 문서명:에러위치:에러시작위치'가 나온다.
+          ■■ [throw new Error('내용')] 굳이 new는 붙이지 않아도 결과적으로 동일
+
+           */
+
+          /*
+          ■■ throw Error / throw new Error 차이점 확인하기
+            */
+
+         // ▼찾아보기
+
+            // class CustomError extends Error {
+            //  constructor(public code: nunmber, message: string) {
+            //      super(message)
+            //  }
+            // }
+            // try {
+            //  throw new CustomError(404, 'Not Found')
+            // } catch (error) {
+            //  const newError = new Error(error)
+
+            //  console.log(newError.cdde)
+            // }
+      </script>
+   </body>
+</html>

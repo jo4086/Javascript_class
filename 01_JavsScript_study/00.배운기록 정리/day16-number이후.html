@@ -1,55 +1,65 @@
-<script>
-   /** ◆ Number 객체
-    * Number 함수
-    * Number(값) : 숫자 객체로 변환
-    * .toFixed(x) : x번째 자리까지 소수점 출력
-    * .isNaN(x) : x가 숫자인지 아닌지 판단
-    * .isFinite(x) : x가 유한한지 아닌지 판단
-    */
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /** ◆ Number 객체
+          * Number 함수
+          * Number(값) : 숫자 객체로 변환
+          * .toFixed(x) : x번째 자리까지 소수점 출력
+          * .isNaN(x) : x가 숫자인지 아닌지 판단
+          * .isFinite(x) : x가 유한한지 아닌지 판단
+          */
 
-   /** ◆ Math 객체
-    * Math 함수
-    * random(): 0 ~ 1 랜덤한 숫자 반환
-    * => 원하는 값의 랜덤숫자 반환 공식
-    * => Math.floor(Math.random()*(최댓값-최솟값+1)) +최솟값:
-    * ▼ example
-    * Math.floor(Math.random()*(10 - 1 + 1)) + 1:
-    * max(n1, n2, ...): 최댓값
-    * min(n1, n2, ...): 최솟값
-    * .floor(x): x값의 소수점 버림
-    * .round(x): x값의 반올림
-    * .ceil(x): x값의 올림
-    */
+         /** ◆ Math 객체
+          * Math 함수
+          * random(): 0 ~ 1 랜덤한 숫자 반환
+          * => 원하는 값의 랜덤숫자 반환 공식
+          * => Math.floor(Math.random()*(최댓값-최솟값+1)) +최솟값:
+          * ▼ example
+          * Math.floor(Math.random()*(10 - 1 + 1)) + 1:
+          * max(n1, n2, ...): 최댓값
+          * min(n1, n2, ...): 최솟값
+          * .floor(x): x값의 소수점 버림
+          * .round(x): x값의 반올림
+          * .ceil(x): x값의 올림
+          */
 
-   /** ◆ string 객체
-    * string 함수
-    * (x).charAt(문자열번호): 해당 객체의 문자열번호에 있는 문자 출력
-    * .indexOf('찾을문자'): 해당문자의 첫번쨰 문자가 있는 문자열 번호
-    * .indexOf('찾을문자',num): num번 이후부터 문자 검색,,
-    * .search('찾을문자'): indexOf와 같이 문자열 번호 출력
-    * .substring(a,b): a문자열위치 이후부터 b문자열 위치 [이전]까지 잘라냄
-    * .replace('a','b'): a문자를 b문자로 바꿈
-    * => 여러개 문자를 전부 바꾸고 싶을 떄,,
-    * .replace(/A/g, 'B')
-    *   1. 바꿀문자 A를 / /g 사이에 넣기 (따옴표 x)
-    *   여기서 g는 발생할 모든 패턴에 대한 전역 검색 (Global search)
-    *   ▶ 대소문자 구분은 i 추가
-    *   ▶ 여러줄 검색은 m 추가
-    *   ▶ 여러 단어를 고치고 싶다면 문자 사이에 ' | ' 추가
-    *       예시 ( /a|b/g )
-    * .split('선택문자'): 선택문자를 기준으로 쪼개서 배열 형태로 저장
-    */
+         /** ◆ string 객체
+          * string 함수
+          * (x).charAt(문자열번호): 해당 객체의 문자열번호에 있는 문자 출력
+          * .indexOf('찾을문자'): 해당문자의 첫번쨰 문자가 있는 문자열 번호
+          * .indexOf('찾을문자',num): num번 이후부터 문자 검색,,
+          * .search('찾을문자'): indexOf와 같이 문자열 번호 출력
+          * .substring(a,b): a문자열위치 이후부터 b문자열 위치 [이전]까지 잘라냄
+          * .replace('a','b'): a문자를 b문자로 바꿈
+          * => 여러개 문자를 전부 바꾸고 싶을 떄,,
+          * .replace(/A/g, 'B')
+          *   1. 바꿀문자 A를 / /g 사이에 넣기 (따옴표 x)
+          *   여기서 g는 발생할 모든 패턴에 대한 전역 검색 (Global search)
+          *   ▶ 대소문자 구분은 i 추가
+          *   ▶ 여러줄 검색은 m 추가
+          *   ▶ 여러 단어를 고치고 싶다면 문자 사이에 ' | ' 추가
+          *       예시 ( /a|b/g )
+          * .split('선택문자'): 선택문자를 기준으로 쪼개서 배열 형태로 저장
+          */
 
-   /** ◆ Date 객체
-    * 가져오기 : .get ~ (공백)
-    * 수정하기 : .set ~ (수정할 값)
-    * 각 뒤에
-    * FullYear() : 연도 정보
-    * Month() : 월 정보 // 월 정보는 0부터 시작하므로 +1 해줘야함
-    * Date() : 일 정보
-    * Day() : 요일 정보
-    * Hours() : 시간 정보
-    * Minutes() : 분 정보
-    * Seconds() : 초 정보
-    */
-</script>
+         /** ◆ Date 객체
+          * 가져오기 : .get ~ (공백)
+          * 수정하기 : .set ~ (수정할 값)
+          * 각 뒤에
+          * FullYear() : 연도 정보
+          * Month() : 월 정보 // 월 정보는 0부터 시작하므로 +1 해줘야함
+          * Date() : 일 정보
+          * Day() : 요일 정보
+          * Hours() : 시간 정보
+          * Minutes() : 분 정보
+          * Seconds() : 초 정보
+          */
+      </script>
+   </body>
+</html>

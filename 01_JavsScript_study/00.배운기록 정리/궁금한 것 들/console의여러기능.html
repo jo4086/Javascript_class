@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1. 콘솔에 스타일을 묶어서 인자로 주기
+         let styles = [
+            'background: linear-gradient(#D33106, #571402)',
+            'border: 1px solid #3E0E02',
+            'color: white',
+            'display: block',
+            'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)',
+            'box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 5px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 5px -10px rgba(255, 255, 255, 0.4) inset',
+            'line-height: 40px',
+            'text-align: center',
+            'font-weight: bold',
+         ].join(';') // 각 배열 인자들을 join 시켜 하나의 문자열로 치환하고 인자마다 끝에 ; 기호를 첨가해준다
+         console.log(styles)
+
+         console.log('%c a spicy log message ?', styles)
+
+         // 2. 콘솔에 변수값을 출력할 때 구조 분해 문법을 사용하여 객체 형식으로 포매팅하여 출력하기
+         const name = 'fatfish'
+         const age = 24
+         const job = 'Front end development engineer'
+         const hobbies = 'read, write article'
+
+         console.log('▼ 객체 구조 분해 황용 전')
+         console.log(name, age, job, hobbies)
+         console.log('▼ 객체 구조 분해 활용 후')
+         console.log({ name, age, job, hobbies })
+         console.log('▼ 객체 구조 분해 심화 (JSON.stringift 사용)')
+         console.log(JSON.stringify({ name, age, job, hobbies }, null, 3))
+         console.warn('안녕')
+         console.debug('안녕')
+         console.error('안녕')
+
+         // 3. 콘솔.group / groupEnd로 묶어서 사용하기 (groupCollapsed)
+
+         console.group('최상단 목록')
+         console.group('1번 리스트')
+         console.log('1-1')
+         console.groupEnd()
+         console.groupCollapsed('2번 리스트')
+         console.log('2-1')
+         console.log('2-2')
+         console.log('2-3')
+         console.groupEnd()
+         console.groupEnd()
+      </script>
+   </body>
+</html>

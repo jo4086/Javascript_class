@@ -13,6 +13,22 @@
          }
          const { theme, fontSize = '16px', language: lang } = settings
          console.log(theme, fontSize, lang)
+
+         /* 
+          JSON객체 settings에서 속성명(key) theme와 language를 변수명으로 가져왔으며 새롭게 fontSize라는 변수도 선언하였고 theme는 settings의 속성값(value)인 'dark'를 그대로 할당하였고 새롭게 선언한 fontSize는 '16px'을 할당, language는 'lang'이라는 'kor'라는 값을 'language'에서 'lang'으로 변수명을 바꿔서 저장하였다.
+
+          순서
+          => 1. 먼저 setting에서 const{ }내부에서 순서대로 settings와 같은것이 있으면 key를 변수명으로, value를 할당값으로 가져온다.
+          => 2. 중간에 일치하지 않는 key가 있다면 새롭게 변수명을 창출하고 뒤에 입력한 값을 할당한다. (값을 동시에 주지 않는다면 undefined가 출력)
+          => 3. key를 가져왔으나 [:새로운 변수명] 형식을 뒤에 붙였다면 값은 그대로 사용하고 변수명을 key에서 새로운 변수명으로 교체해서 저장한다.
+
+          풀어서 쓰게되면
+          const theme = 'dark'
+          const fontSize = '16px'
+          const lang = 'kor'
+
+          console.log에는 [dark 16px kor]로 나올 것이다.
+          */
       </script>
    </body>
 </html>

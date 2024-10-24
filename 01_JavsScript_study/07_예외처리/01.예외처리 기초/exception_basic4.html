@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         try {
+            // const array = new Array(5) // 5개의 빈 배열을 만들어준다. [ , , , , ]
+
+            const array = new Array(9999999999999999999999)
+            console.log(array)
+         } catch (exception) {
+            console.log(exception)
+            // ▼ 예외 이름
+            console.log('예외 이름: ', exception.name)
+            // ▼ 예외 메시지
+            console.log('예외 메세지: ', exception.massage)
+            // throw '에러'
+            
+            // Error('에러')
+            // throw Error('에러')
+            // throw add()
+            // throw new '에러'
+            // throw new Error('에러입니다')
+            // throw new Error(에러입니다)
+            // throw new 'add'('에러입니다.')
+            // throw new 에러
+            // throw new cd()
+            // throw new NullPointerException()
+         }
+         console.log('안녕')
+      </script>
+   </body>
+</html>

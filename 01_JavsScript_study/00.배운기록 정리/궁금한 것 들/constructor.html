@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         class Person {
+            constructor(name) {
+               this.name = name
+            }
+
+            introduce() {
+               console.log(`Hello, my name is ${this.name}`)
+            }
+         }
+
+         // new Person('inno')
+         new Person('inno').introduce()
+         //  inno.introduce()
+         //  const otto = new Person('Otto')
+
+         //  otto.introduce()
+         /* 결과
+         Hello, my name is Otto
+         */
+
+         const add = {
+            name: 'wow',
+            age: this.name,
+            home: '집',
+            kid() {
+               console.log(`${this.name}`)
+            },
+            get:function() {
+               this.home
+            },
+         }
+         console.log(add.name)
+         console.log(add.age)
+         add.kid()
+         //  console.log(add.kid())
+        //  add.get()
+         console.log(add.get)
+         // 여기서 undefined가 나오는 이유
+         // add.kid()에서 콘솔로그를 가져온걸 콘솔로그로 넣었기 떄문
+         // add.kid()는 곧
+         // console.log(`${this.name}`)이고
+         // 이를 다시 콘솔로그에 넣은 상태이므로...
+         // ▼ 아래와 다고 보면 된다.
+         console.log('───────────')
+         console.log(console.log(add.home))
+      </script>
+   </body>
+</html>

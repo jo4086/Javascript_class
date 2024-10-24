@@ -7,8 +7,21 @@
    </head>
    <body>
       <script>
-         const obj1 = { age: 25, city: '부산' }
-         const obj2 = { name: '희철', age: 30 }
+         const obj1 = {
+            age: 25,
+            city: '부산',
+         }
+         const obj2 = {
+            name: '희철',
+            age: 30,
+            ...obj1
+         }
+
+         // ▼ 새롭게 지정하는 방법
+         // const obj3 ={...obj2,...obj1}
+
+         console.log(obj2)
+         // console.log(obj3)
       </script>
    </body>
 </html>

@@ -7,13 +7,38 @@
    </head>
    <body>
       <script>
+         /* 
+          콜백함수는 함수자체를 매개변수로 사용하는것을 말한다.
+          */
          console.log('안녕하세요')
 
-         setTimeout(() => {
-            console.log('저는')
-         }, 1000)
+         function time(callback) {
+            setTimeout(() => {
+               console.log('저는')
+               callback()
+            }, 1000)
+         }
+         time(() => {
+            console.log('하니입니다.')
+         })
 
-         console.log('하니입니다.')
+         /*
+          time의 화살표함수인 [() => {console.log('하니입니다.')}] 자체를
+          callback이라는 매개변수에 저장시켰고
+
+          function time은 먼저 setTimeout()을 실행
+          1s가 지나고 나면 setTimeout에 저장된 값인
+          console.log('저는')
+          callback()을 순서대로 실행시키며
+          callback()은 곧 () => {console.log('하니입니다.')} 이기에
+          하니입니다가 출력이된다.
+          */
+
+         // setTimeout(() => {
+         //    console.log('저는')
+         // }, 1000)
+
+         // console.log('하니입니다.')
       </script>
    </body>
 </html>

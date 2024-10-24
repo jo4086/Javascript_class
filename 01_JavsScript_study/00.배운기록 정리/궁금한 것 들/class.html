@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         /* 
+         ■■ 1. 클래스(class)란?
+          => 클래스는 객체(Object)와 관련이 있다.
+          => 객체를 직접 작성하여 정의하고 생성할 수도 있지만
+          => 클래스로 만들어 주면 [여러 객체]를 더 쉽게 만들 수 있다.
+          => 즉 클래스는 객체를 생성하기 위한 템플릿이다!!
+
+          class를 통하여 원하는 구조의 객체 틀을 짜놓고
+          비슷한 모양의 객체를 공장처럼 만들어 낼 수 있다.
+         */
+
+         /* 
+          ■■ 2. class를 를 사용하는 이유??
+           => JavaScript는 [prototype]기반의 객체지향 프로그래밍 언어
+           => ES6에 추가된 기능
+           => 코드들을 직관적으로 쉽게 읽어주며
+           => 작성하기 쉽고
+           => class기반 언어에 익숙한 개발자가 더 빠르게 적응할 수 있다.
+          */
+
+         // ▼ 예시1 )
+
+         // [prototype]
+         function Me(name) {
+            console.group('new 출력')
+            console.log(`▶ 여기는 person = new Me('${name}'')의 ${name}이 functiocn Me(name)에 매개변수 name에 저장된다.\n${name}`)
+
+            console.log('▶ this.name에 아직 변수값을 저장하지 않으므로 undefined가 출력\n', this.name)
+            this.name = name
+            console.log(`▶ this.name = name을 선언하였으므로 this.name에 '${name}'저장\n${this.name}`)
+            console.groupEnd()
+         }
+
+         Me.prototype.wow = function () {
+            console.log('▶  Me.prototype.wow = function () {} 추가\n', 'WOW!')
+         }
+
+         console.log('첫번째 콘솔 출력: ', Me.name)
+         let person = new Me('Jason')
+         let person2 = new Me('korea')
+
+         person.wow() // WOW!
+
+         // [class]
+         /*
+          class Me {
+            constructor(name) {
+               this.name = name
+            }
+
+            wow() {
+               console.log('WOW!')
+            }
+         }
+
+         let person = new Me('Jason')
+         person.wow() // WOW! */
+      </script>
+   </body>
+</html>

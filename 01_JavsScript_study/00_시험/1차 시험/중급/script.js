@@ -19,6 +19,10 @@ const student = {
 
 const subject = student.subject
 const scores = [subject.kor]
+// console.log(Object.values(subject).length)
+// for (i = 0; i <= Object.values(subject).length; i++) {
+//    scores[i] = Object.values(subject)[i]
+// }
 
 // 풀이 1.
 for (i = 1; i <= 3; i++) {

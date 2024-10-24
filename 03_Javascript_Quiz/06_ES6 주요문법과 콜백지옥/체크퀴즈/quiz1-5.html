@@ -7,8 +7,22 @@
    </head>
    <body>
       <script>
+         // const originalArray = [1, 2, 3]
+         // const copiedArray = originalArray
+         // copiedArray.push(4)
+         // console.log(originalArray)
+         // console.log(copiedArray)
+
+         // copieArray는 originalArray의 메모리
+         // 원시형 데이터와 참조형(객체타입) 데이터의 저장 방식의 차이로 객체자료형은 데이터를 힙이라는 메모리에 원본을 저장한다.
+         // 그리고 이를 새로운 배열이나 객체구조로 만들고 데이터를 넣는 방법이 아니면 스택 메모리로 복사를 하게되는데 스택메모리는 힙의 주소를 원본으로 동일하게 갖기에 힙이 수정이되어 둘 다 수정이 된다.
+         // 수정 방법으로는 전개 연산자(스프레드 문법)과 반복문 두 가지가 있다.
+         // 검색에 의하면 내부의 참조형 데이터들은 여전히 얕은 복사가 된다는 점이 있으며 재귀함수로 내부의 참조형 데이터들도 깊은 복사를 할 수 있다고 한다.
+
+         // 코드수정
+
          const originalArray = [1, 2, 3]
-         const copiedArray = originalArray
+         const copiedArray = [...originalArray]
          copiedArray.push(4)
          console.log(originalArray)
          console.log(copiedArray)

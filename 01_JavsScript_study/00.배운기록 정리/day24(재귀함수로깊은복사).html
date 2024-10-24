@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const deepCopy = (param) => {
+            if (typeof param !== 'object' || param === null) {
+               return param
+            }
+
+            if (param instanceof Array) {
+               return param.reduce((newArr, val) => {
+                  newArr.push(deepCopy(val))
+                  return newArr
+               }, [])
+            } else if (param instanceof Object) {
+               return Object.keys(param).reduce((newObj, key) => {
+                  newObj[key] = deepCopy(param[key])
+                  return newObj
+               }, {})
+            }
+         }
+
+         const user = {
+            champ: '이즈리얼',
+            level: 1,
+            stat: {
+               ad: 50,
+               ap: 10,
+            },
+            items: [
+               { name: '롱소드', stack: 1 },
+               { name: '체력 물약', stack: 3 },
+            ],
+         }
+
+         console.log(user)
+         console.log(deepCopy(user))
+      </script>
+   </body>
+</html>
