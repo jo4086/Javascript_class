@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function b() {
+            console.log('b called!')
+         }
+
+         //  function a(another) {
+         //     console.log('a started!')
+         //     another()
+         //     console.log('a ended!')
+         //  }
+         let a = (another) => {
+            console.log('a started!')
+            another()
+            console.log('a ended!')
+         }
+
+         console.log(1)
+         console.log(2)
+         a(b)
+         console.log(3)
+         console.log(4)
+
+         /* 출력 결과
+         1
+         2
+         a started!
+         b called!
+         a ended!
+         3
+         4            */
+
+         /*
+         작동순서
+         console.log(1)
+         console.log(2)
+         a(b)
+         console.log(3)
+         console.log(4)
+
+         중간에 a(b)로 인해 a이름의 함수를 가져옴
+
+         function a(another) {
+             console.log('a satrted')
+             another()
+             console.log(a ended!)
+         }
+
+         a함수를 실행하는데 a함수의 매개변수명=another에는 a(b)구조였기에
+         b = another가 되고
+         함수를 호출
+
+         최종적으로
+         function a()
+              */
+
+         //  function b() {
+         //     console.log('b called!')
+         //  }
+
+         //  const a = (another) => {
+         //     console.log('a started!')
+         //     another()
+         //     console.log('a ended!')
+         //  }
+
+      </script>
+   </body>
+</html>

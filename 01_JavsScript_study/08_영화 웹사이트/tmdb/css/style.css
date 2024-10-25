@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 초기화 CSS 속성 */
+
+body {
+   /* 1점 */
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em;
+}
+
+ul {
+   /* 1점 */
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   /* 1점 */
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+p {
+   /* 1점 */
+   margin: 0;
+}
+/* ■■■■■■■■■■
+    <header>
+   ■■■■■■■■■■ */
+/* ■■내가 추가해본것■■
+.nav-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}  ■■■■■■■■■■ */
+
+/* ■■■■■■■■■■
+    <main>
+
+    카드의 형식
+    <div class="row">
+      <div class="col">
+         <div class="card">
+            <a href="#">
+               <img src="..." class="card-img-top poster" alt="poster" />
+            </a>
+            <div class="card-body">
+               <p class="card-text title">제목</p>
+               <p class="card-text average">평점</p>
+            </div>
+         </div>
+      </div>
+
+    
+   ■■■■■■■■■■ */
+
+/* ■■■■■■■■■■
+    <footer>
+   ■■■■■■■■■■ */
+
+footer {
+   /* 1점 */
+   height: 100px;
+   line-height: 100px;
+   background-color: #f2f2f2;
+}
