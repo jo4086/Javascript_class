@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function solution(input_string) {
+            while (!isNaN(input_string)) {
+               alert('문자가 아닙니다. 다시 입력하세요')
+               input_string = prompt('입력')
+            }
+            console.log('input_string.length: ', input_string.length)
+            console.log('input_string.toLowerCase', input_string.toLowerCase())
+
+            input_string = input_string.toLowerCase()
+            // input_string =  input_string.toLowerCase()
+            // let text = input_string
+            // console.log('text.length: ',text.length)
+            // JSON.stringify(text)
+            // const t4 = JSON.stringify(text)
+            // console.log(JSON.stringify(text))
+            // console.log(t4.length)
+            // console.log(JSON.parse(t4).length)
+            // input_string.toLowerCase()
+            // console.log(input_string)
+            // console.log(typeof(input_string))
+            // let leng = toString(input_string).length
+            // console.log(leng)
+
+            if (typeof input_string === 'string' && /^[a-z]+$/.test(input_string) && input_string.length >= 1 && input_string.length <= 2600) {
+               console.log(input_string)
+               console.log(input_string.charAt(1))
+               var ary = []
+               var ary2 = []
+               for (let i = 0; i < input_string.length; i++) {
+                  console.group(`${i}`)
+                  // ary.indexOf(i)
+                  if(ary.indexOf(i) === -1) {
+                     ary += input_string.charAt(i)
+                  } else (
+                     ary2 += input_string.charAt(i)
+                  )
+                  // console.log(ary.indexOf(i))
+                  // console.log(input_string.charAt(i))
+                  console.groupEnd()
+
+                  // if(ary.indexOf(i) === -1) {
+                  //    ary += ary.indexOf(i)
+                  // }
+               }
+               console.log('없는 단어 푸쉬',ary)
+               console.log('중복단어 모음',ary2)
+            }
+
+            // console.log(input_string)
+            // console.log(isNaN(input_string))
+            // console.log(typeof(input_string))
+
+            var answer = ''
+            return answer
+         }
+         //  const x = prompt('입력')
+         //  input_string
+
+         solution(prompt('입력'))
+      </script>
+   </body>
+</html>

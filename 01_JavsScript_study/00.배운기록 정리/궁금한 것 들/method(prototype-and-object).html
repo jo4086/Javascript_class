@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+        a {
+            line-height: 16px;
+        }
+      </style>
+   </head>
+   <body>
+      <script>
+         function Animal(animal) {
+            this.animal = animal
+
+            // 객체 생성자 내에서 모든 객체 인스턴스에서 공용으로 쓰이는 메소드를 추가합니다.
+            this.bark = function (cry) {
+               console.log(this.animal + ' : ' + cry)
+            }
+         }
+
+         // dog와 cat 인스턴스를 만들고 울음소리를 넣어서 짖어봅시다.
+         const array = []
+         array.name1 = 10
+         array.name2 = 20
+         array.name3 = {tag1 :1, tag2:2}
+         array.push('name4')
+        //  array[0] = {tag1 : 1,tag2 : 2}
+         array.push('배열2')
+         array.push('배열3')
+         array.push('추가배열')
+         
+         var dog = new Animal('dog')
+         var cat = new Animal('cat')
+         dog.bark('woof') // dog : woof
+         cat.bark('mew') // cat : mew
+
+         console.group('작동순서 분석하기')
+         console.log("%cfunction Animal(animal) {\n    this.animal = animal\n\n    this.bark = function (cry) {\n        console.log(this.animal + ' : ' + cry)\n    }\n}\n\nvar dog = new Animal('dog')\nvar dog = new Animal('cat')","font-weight:600;color:#898989;background-color:yellow;line-height: 18px;")
+         console.log('array = ',array)
+         console.log('array.name1 =',array.name1)
+         console.log('array.length = ',array.length)
+         console.log('JSON.stringify(array,null,3) = ',JSON.stringify(array,null,3))
+         console.log('JSON.stringify(array.name1,null,3) = ',JSON.stringify(array.name1,null,3))
+         console.log(Object.keys(array))
+         console.log(Object.values(array))
+         console.log(array[0])
+
+      </script>
+   </body>
+</html>

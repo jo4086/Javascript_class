@@ -51,6 +51,17 @@
          console.log('2-3')
          console.groupEnd()
          console.groupEnd()
+
+         const 객체 = {
+            이름: '객체',
+            속성: '프로퍼티',
+         }
+         console.group('프로토 실험')
+         console.info('console.info(객체)\n', 객체)
+         console.log('console.log(객체)\n', 객체)
+         console.group('▼ console.dir(객체)\n')
+         console.dir(객체)
+         console.groupEnd()
       </script>
    </body>
 </html>
