@@ -177,7 +177,7 @@ let style1 = ['font-weight:bold', 'font-size:1.2em', 'background-color:#f3ee53',
 
 let style2 = ['font-size:0.95em', 'display:block', 'line-height:16px'].join(';')
 
-console.group('%c<script>', style1)
+console.groupCollapsed('%c<script>', style1)
 console.log(
    `%c const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR'       \n const getPlayingMovies = async (url) =>  {\n       try {\n           const respones = await fetch(url, options)\n           const data = await respones.json()\n           const results = data.results\n\n           const container = document.querySelector('main .container)\n           let rowsHtml = ''\n\n           for (let i = 0; i< results.length; i += 4) {\n               let rowHtml = '<div class="row">\n\n               for (let j = 0; j < 4; j++) {\n                   const index = i + j\n\n                   if (index >= results.length) break\n\n                   const movie = results[index]\n                   rowHtml +=\n                         '<div class="~~">'\n                              <div class="card">\n                                  반복내용\n                              </div>\n                          </div>'\n               }\n               rowHtml += '</div>'\n               rowsHtml += rowHtml\n           }\n           container.innerHTML = rowsHtml\n       } catch (error) {\n          console.error('에러발생',error)\n    }\n}\n\ngetPlayingMovies(url)`,
    style2
@@ -198,6 +198,7 @@ const getPlayingMovies = async (url) => {
       console.log(`▶ cosnt data 부분에서는 코드를 즉각 실행시킬 수 있으므로 fetch에서 데이터를 불러오는 시간보다 먼저 계산이 완료됌`)
       console.log(`▶ data는 respones.json() 형식으로 불러온 데이터에서 속성을 불러와야 하는데\n  => 이게 완료되기 전에 읽어냄`)
       console.groupEnd()
+
 
       const respones = await fetch(url, options)
 
