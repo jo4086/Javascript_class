@@ -199,7 +199,6 @@ const getPlayingMovies = async (url) => {
       console.log(`▶ data는 respones.json() 형식으로 불러온 데이터에서 속성을 불러와야 하는데\n  => 이게 완료되기 전에 읽어냄`)
       console.groupEnd()
 
-
       const respones = await fetch(url, options)
 
       // await를 사용하는 이유
@@ -260,3 +259,5 @@ const getPlayingMovies = async (url) => {
 }
 
 getPlayingMovies(url)
+
+// TMDB 인기 있는 TV 프로그램 페이지, 상세 페이지 만들기

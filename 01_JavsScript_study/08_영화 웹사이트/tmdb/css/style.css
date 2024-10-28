@@ -30,6 +30,34 @@ p {
 /* ■■■■■■■■■■■■■■■■■■
     <header> - start
    ■■■■■■■■■■■■■■■■■■ */
+
+   /* header .navbar-collapse,
+   header .navbar-brand,
+   header .navbar-toggler {
+      background-color: #898989;
+   } */
+   header .nav-link {
+      font-weight: bold !important;
+      color: white;
+   }
+   /* 네비 서브메뉴 */
+   .nav-sub-item {
+      position: absolute;
+      top: 60px;
+      background-color: #5863fbba;
+      z-index: 1000;
+      border-radius: 5px;
+   }
+   .nav-sub-item li {
+      padding: 3px 15px;
+      width: 120px;
+   }
+   .nav-sub-item li a {
+      font-size: 0.9em;
+
+   }
+
+
 /* 
    ■■■■■■■■■■■■■■■■■■
     <header> - end
