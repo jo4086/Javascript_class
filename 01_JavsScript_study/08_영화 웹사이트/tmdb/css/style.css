@@ -27,44 +27,138 @@ p {
    /* 1점 */
    margin: 0;
 }
-/* ■■■■■■■■■■
-    <header>
-   ■■■■■■■■■■ */
-/* ■■내가 추가해본것■■
-.nav-link {
+/* ■■■■■■■■■■■■■■■■■■
+    <header> - start
+   ■■■■■■■■■■■■■■■■■■ */
+/* 
+   ■■■■■■■■■■■■■■■■■■
+    <header> - end
+   ■■■■■■■■■■■■■■■■■■
+     <main>  - start
+   ■■■■■■■■■■■■■■■■■■ */
+
+main .container {
+   padding: 40px 0;
+}
+
+main .container .movie-detail > ul.movie-info,
+p {
+   margin-bottom: 10px !important;
+}
+
+main .container ul.movie-info {
    display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-}  ■■■■■■■■■■ */
+}
+
+main .container ul.movie-info li {
+   padding-right: 13px;
+}
+
+main .container .row .card {
+   height: 100%;
+}
+main .container .row .card a {
+   height: 85%;
+}
+main .container .row .card img {
+   height: 100%;
+   object-fit: cover;
+}
 
 /* ■■■■■■■■■■
-    <main>
-
-    카드의 형식
-    <div class="row">
-      <div class="col">
-         <div class="card">
-            <a href="#">
-               <img src="..." class="card-img-top poster" alt="poster" />
-            </a>
-            <div class="card-body">
-               <p class="card-text title">제목</p>
-               <p class="card-text average">평점</p>
-            </div>
-         </div>
-      </div>
-
-    
-   ■■■■■■■■■■ */
-
-/* ■■■■■■■■■■
-    <footer>
+     <main>  - end
+   ■■■■■■■■■■
+    <footer> - Start
    ■■■■■■■■■■ */
 
 footer {
    /* 1점 */
    height: 100px;
    line-height: 100px;
+   width: 100%;
    background-color: #f2f2f2;
+}
+
+.Credits.col-md-2 {
+   height: 100%;
+}
+.card-body {
+   height: 100px;
+}
+/* 반응형 UI 해결 */
+@media (min-width: 576px) and (max-width: 767px) {
+   .col-sm-9 {
+      width: 50%;
+   }
+   .col-sm-3.poster {
+      width: 50%;
+   }
+
+   main .container ul.movie-info {
+      display: initial;
+   }
+   main .container ul.movie-info li {
+      padding-bottom: 10px;
+   }
+   main .container .row .detail.card img {
+      height: 160px;
+      background-color: #f6f6f6;
+      border-bottom: 1px solid #d0d0d0;
+   }
+}
+@media (max-width: 575px) {
+   main .container {
+      width: 100%;
+      min-width: 400px;
+      padding: 0;
+      margin: 0;
+   }
+   main .container .row .poster {
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+   }
+   main .container .row .movie-datail {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+   }
+   main .container .row h2 {
+      padding:5px 0;
+      border-top : 1px solid #898989;
+      border-bottom: 1px solid #898989;
+   }
+   main .container .row.Poster p {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #898989;
+   }
+   main .container .row .movie-datail {
+      margin: 10px auto;
+   }
+   main .container .row .movie-info {
+      display: block;
+      width: 100%;
+   }
+   main .container {
+      justify-content: center;
+      display: block;
+      margin: 0 auto;
+   }
+   main .container .Credits.row {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+   }
+   main .container .Credits.col-12 {
+      width: 50%;
+   }
+   main .container .row .Credits img {
+      height:240px;
+      background-color: #f6f6f6;
+      border-bottom: 1px solid #d0d0d0;
+   }
+   footer {
+      min-width: 400px;
+   }
 }
