@@ -30,33 +30,66 @@ p {
 /* ■■■■■■■■■■■■■■■■■■
     <header> - start
    ■■■■■■■■■■■■■■■■■■ */
+/* 상위 탭 기본색과 hover 색 */
+header .nav-link {
+   font-weight: bold !important;
+   color: rgb(201, 201, 201);
+}
+header .nav-link:hover {
+   color: white;
+}
 
-   /* header .navbar-collapse,
-   header .navbar-brand,
-   header .navbar-toggler {
-      background-color: #898989;
-   } */
-   header .nav-link {
-      font-weight: bold !important;
-      color: white;
-   }
-   /* 네비 서브메뉴 */
-   .nav-sub-item {
-      position: absolute;
-      top: 60px;
-      background-color: #5863fbba;
-      z-index: 1000;
-      border-radius: 5px;
-   }
-   .nav-sub-item li {
-      padding: 3px 15px;
-      width: 120px;
-   }
-   .nav-sub-item li a {
-      font-size: 0.9em;
-
-   }
-
+/* 돋보기 기본색과 hover 색 */
+header .nav-link i {
+   color: rgb(201, 201, 201);
+}
+header .nav-link:hover > i {
+   color: white;
+}
+/* 언어아이콘 기본색과 hover 색 */
+header .nav-link.active i {
+   color: #5699c3;
+}
+header .nav-link.active:hover > i {
+   color: #3cb4fe;
+}
+/* 상위탭 오버시 하위리스트 보이게 */
+header .nav-item:hover .nav-sub-item {
+   display: block;
+}
+/* 반응형 웹에서 메뉴버튼의 색과 크기 조정 */
+header button.navbar-toggler {
+   background-color: rgb(115, 155, 187);
+   color: transparent;
+   width: 46px;
+   height: 33px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 7px;
+}
+/* 네비 서브메뉴 */
+.nav-sub-item {
+   position: absolute;
+   top: 58px;
+   background-color: #ffffff;
+   z-index: 1000;
+   border-radius: 5px;
+   display: none;
+}
+.nav-sub-item li {
+   padding: 4px 15px;
+   width: 120px;
+}
+.nav-sub-item li:first-child {
+   padding-top: 10px;
+}
+.nav-sub-item li:last-child {
+   padding-bottom: 8px;
+}
+.nav-sub-item li a {
+   font-size: 0.9em;
+}
 
 /* 
    ■■■■■■■■■■■■■■■■■■
@@ -113,6 +146,25 @@ footer {
 .card-body {
    height: 100px;
 }
+@media (max-width: 991px) {
+   .nav-item {
+      width: 110px;
+   }
+   .nav-link {
+      border-bottom: 1px solid rgb(179, 179, 179);
+      width: 100px;
+   }
+   .nav-item {
+      position: relative;
+   }
+   .nav-sub-item {
+      left: 103px;
+      top: 8px;
+   }
+   header .nav-link:hover ~ .nav-sub-item {
+      display: block;
+   }
+}
 /* 반응형 UI 해결 */
 @media (min-width: 576px) and (max-width: 767px) {
    .col-sm-9 {
@@ -152,8 +204,8 @@ footer {
       margin: 0 auto;
    }
    main .container .row h2 {
-      padding:5px 0;
-      border-top : 1px solid #898989;
+      padding: 5px 0;
+      border-top: 1px solid #898989;
       border-bottom: 1px solid #898989;
    }
    main .container .row.Poster p {
@@ -182,7 +234,7 @@ footer {
       width: 50%;
    }
    main .container .row .Credits img {
-      height:240px;
+      height: 240px;
       background-color: #f6f6f6;
       border-bottom: 1px solid #d0d0d0;
    }

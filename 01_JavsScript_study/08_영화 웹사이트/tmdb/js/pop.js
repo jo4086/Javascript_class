@@ -11,22 +11,70 @@ const options = {
 //    .then((res) => console.log(res))
 //    .catch((err) => console.error(err))
 
+/* 
+  <a id="set" target="_blank">shinyks.com</a>
+
+  <button onclick="demo()">Set Attribute</button>
+
+  <script>
+    function demo() {
+      document.getElementById("set").setAttribute("href", "https://shinyks.com");
+      document.getElementById("set").style.color = "red";
+    }
+  </script> */
+
+const button = document.querySelector('.button1_text')
+const dropdown = document.querySelector('.dropdown')
+const option = document.querySelectorAll('.option')
+const droplist = document.querySelector('#dropdown')
+const selected = document.querySelector('.selected')
+selected.innerHTML = option[0].innerText
+
+droplist.addEventListener('click', () => {
+   const options = document.getElementById('options')
+   if (options.style.display === 'none') {
+      options.style.display = 'block'
+      option.forEach(function (list) {
+         
+      })
+   } else {
+      options.style.display = 'none'
+   }
+})
+
+// option.forEach(function (e) {
+//    e.addEventListener('click', function () {
+//       selected.innerHTML = tihs.innerText
+//    })
+// })
+function button1() {
+   const viewdiv = document.getElementById('drop-tab')
+   const btn1 = document.getElementById('btn1')
+   if (viewdiv.style.display === 'none') {
+      viewdiv.style.display = 'block'
+      btn1.style.borderRadius = '8px 8px 0 0'
+   } else {
+      viewdiv.style.display = 'none'
+      btn1.style.borderRadius = '8px'
+   }
+}
+
 const url = 'https://api.themoviedb.org/3/tv/popular?language=ko-KR&page=1'
 
 const getPlayingPopularTvs = async (url) => {
-    try {
-        const respones = await fetch(url, options)
-        const data = await respones.json()
-        console.log(data)
-        for (let i = 0; i < data.results.length; i++) {
-            console.group(i)
-            console.log(data.results[i].name)
-            console.groupEnd()
-        }
-        console.log(data.results)
-    } catch (error) {
-        console.error('에러 발생: ',error)
-    }
-
+   try {
+      const respones = await fetch(url, options)
+      const data = await respones.json()
+      console.log(data)
+      console.log(data.results.length)
+      for (let i = 0; i < data.results.length; i++) {
+         console.groupCollapsed(i)
+         console.log(data.results[i].name)
+         console.groupEnd()
+      }
+      console.log(data.results)
+   } catch (error) {
+      console.error('에러 발생: ', error)
+   }
 }
 getPlayingPopularTvs(url)
