@@ -2,7 +2,7 @@
 <html lang="ko">
    <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2,minimum-scale=0.5" />
       <title>Document</title>
 
       <!-- bootstrap -->
@@ -14,9 +14,9 @@
       <link rel="stylesheet" href="./css/tv_style.css" />
    </head>
    <body>
-      <div class="wrap" style="background-color: #24536c">
+      <div class="wrap" style="background-color: #24536c;min-width: 1040px;">
          <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(3, 37, 65) !important">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(3, 37, 65) !important;min-width: 1040px;">
                <!-- 좌측 리스트 박스 -->
                <div class="container">
                   <a class="navbar-brand" href="./index(수정안).html" style="width: 100px">
@@ -28,16 +28,16 @@
                   <div class="collapse navbar-collapse" id="navbarText">
                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                           <a class="nav-link" aria-current="page">영화</a>
+                           <a class="nav-link" aria-current="page" href="./index(수정안).html">영화</a>
                            <ul class="nav-sub-item">
                               <li><a href="">인기</a></li>
-                              <li><a href="">현재 상영 중</a></li>
+                              <li><a href="./detail.html">현재 상영 중</a></li>
                               <li><a href="">개봉 예정</a></li>
                               <li><a href="">높은 평점</a></li>
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link">TV프로그램</a>
+                           <a class="nav-link" href="./index-TV.html">TV프로그램</a>
                            <ul class="nav-sub-item">
                               <li><a href="./pop.html">인기</a></li>
                               <li><a href="">오늘 방영</a></li>
@@ -90,8 +90,8 @@
             </nav>
          </header>
          <main>
-            <div class="container" style="height: 1000px; display: flex">
-               <div class="left col-md-3" style="background-color: rgb(236, 183, 84); height: 1000px">
+            <div class="container" style="height: 1000px; display: flex;min-width: 1000px;">
+               <div class="left col-3 col-md-3" style="background-color: rgb(236, 183, 84); height: 1000px">
                   <h3>인기 <span>TV</span> 프로그램</h3>
                   <div class="button b1" id="btn1">
                      <div class="button1_text" onclick="button1()">
@@ -134,7 +134,7 @@
                      </div>
                   </div> -->
                </div>
-               <div class="col-md-9" style="background-color: greenyellow; height: 1000px"></div>
+               <div class="right col-9 col-md-9" style="background-color: greenyellow; height: 1000px"></div>
             </div>
          </main>
          <footer></footer>

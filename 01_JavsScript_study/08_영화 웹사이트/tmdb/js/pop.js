@@ -30,34 +30,51 @@ const droplist = document.querySelector('#dropdown')
 const selected = document.querySelector('.selected')
 selected.innerHTML = option[0].innerText
 
-droplist.addEventListener('click', () => {
-   const options = document.getElementById('options')
-   if (options.style.display === 'none') {
-      options.style.display = 'block'
-      option.forEach(function (list) {
-         
-      })
-   } else {
-      options.style.display = 'none'
-   }
-})
-
-// option.forEach(function (e) {
-//    e.addEventListener('click', function () {
-//       selected.innerHTML = tihs.innerText
-//    })
-// })
+// 좌측 버튼 onclick 이벤트
 function button1() {
+   // 클릭시 보이게 속성을 변경할 Id 연결
    const viewdiv = document.getElementById('drop-tab')
+   // 클릭시 추가되는 div로 테두리의 스타일을 변경하여 자연스럽게 하나처럼 보이게
    const btn1 = document.getElementById('btn1')
+
+   // 클릭시 조건 설정
    if (viewdiv.style.display === 'none') {
+      // 안보이는 상태면 보이게하고 테두리스타일 변경
       viewdiv.style.display = 'block'
       btn1.style.borderRadius = '8px 8px 0 0'
    } else {
+      // 보이는 상태면 숨기고 테두리 원래대로
       viewdiv.style.display = 'none'
       btn1.style.borderRadius = '8px'
    }
 }
+
+// onclick이후 안의 드롭다운 펼치는 이벤트
+droplist.addEventListener('click', () => {
+   // 드롭다운 클릭시 속성을 변경할 ul태그의 id 변수로 지정
+   const options = document.getElementById('options')
+
+   // 조건에 따라 드롭다운이 보이거나 안보이게
+   if (options.style.display === 'none') {
+      // 안보일시 보이게하고
+      options.style.display = 'block'
+   } else {
+      // 보이면 안보이게
+      options.style.display = 'none'
+   }
+})
+
+// 드롭다운 li태그들에 이벤트리스너 모두 연결
+option.forEach(function (e) {
+   // li태그에 클릭 이벤트 발생 추가
+   e.addEventListener('click', function () {
+      // 드롭다운 선택시 텍스트 변경
+      selected.innerText = this.innerText
+      // 드롭다운 선택시 드롭다운 숨김
+      const options = document.getElementById('options')
+      options.style.display = 'none'
+   })
+})
 
 const url = 'https://api.themoviedb.org/3/tv/popular?language=ko-KR&page=1'
 
