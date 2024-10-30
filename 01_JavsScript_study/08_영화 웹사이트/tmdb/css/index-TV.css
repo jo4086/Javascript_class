@@ -91,3 +91,10 @@ header button.navbar-toggler {
 .nav-sub-item li a {
    font-size: 0.9em;
 }
+
+/* main 시작 */
+main .container .cardbox .slide_card img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}

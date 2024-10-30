@@ -141,10 +141,8 @@ const getPlayingMovies = async (url) => {
       let rowsHtml = ''
 
       for (let i = 0; i < results.length; i += 4) {
-         let rowHtml = '<div class="row">'
-
-         for (let j = 0; j < 4; j++) {
          const index = i + j
+
          if (index >= results.length) break
 
          const movie = results[index]
@@ -174,22 +172,66 @@ getPlayingMovies(url)      */
 
 const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR'
 
+// getPlayingMovies(url)
+let style1 = ['font-weight:bold', 'font-size:1.2em', 'background-color:#f3ee53', 'border:1px solid black', 'display:flex', 'text-align:cetner', 'line-height:30px', 'text-shadow: 2px -2px 3px rgba(0,0,0,0.3)'].join(';')
+
+let style2 = ['font-size:0.95em', 'display:block', 'line-height:16px'].join(';')
+
+console.groupCollapsed('%c<script>', style1)
+console.log(
+   `%c const url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR'       \n const getPlayingMovies = async (url) =>  {\n       try {\n           const respones = await fetch(url, options)\n           const data = await respones.json()\n           const results = data.results\n\n           const container = document.querySelector('main .container)\n           let rowsHtml = ''\n\n           for (let i = 0; i< results.length; i += 4) {\n               let rowHtml = '<div class="row">\n\n               for (let j = 0; j < 4; j++) {\n                   const index = i + j\n\n                   if (index >= results.length) break\n\n                   const movie = results[index]\n                   rowHtml +=\n                         '<div class="~~">'\n                              <div class="card">\n                                  반복내용\n                              </div>\n                          </div>'\n               }\n               rowHtml += '</div>'\n               rowsHtml += rowHtml\n           }\n           container.innerHTML = rowsHtml\n       } catch (error) {\n          console.error('에러발생',error)\n    }\n}\n\ngetPlayingMovies(url)`,
+   style2
+)
+console.groupEnd()
+
 const getPlayingMovies = async (url) => {
+   console.group("const getPlayingMivoes =async (url) <= [url] 매개변수명에\n 매개변수 값으로 getPlayingMovies(url)의 [url] 저장\nconst url = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1&region=KR' 을 선언하였으므로\n\n최종적으로 async의 매개변수명(url)에는 위 링크가 저장")
+   console.log('실험 결과확인\nconsole.log(url): ', url)
+   console.groupEnd()
    try {
+      // console.lop로 기록
+      console.group(`try문 분석하기`)
+      console.log(`const respones = await fetch(url, options)에서 url은 async의 매개변수명인 url이고 이에 저장된 링크를 뜻함\n(외부 const url이 아닌 매개변수명 url,, 이는 매개변수명을 달리해도 동작한다는 뜻)\n실험을 통하여 async(url)을 (ss)로 바꾸고 동작한 결과 정상 작동...\n=> 예상한 결과 나옴`)
+
+      console.group(`const = await respones.json()에서 await를 사용한 이유\n`)
+      console.log(`▶ 위에서 선언한 const respones = awiat fetch(url, options)은 서버에서 데이터값을 불러오는데 약간의 시간이 걸림\n  => 내부는 동기적으로 가동하나 외부로 보면 비동기 함수\n  => 즉 밑에 다른 함수가 있으면 독립된 관계이므로 바로 실행시킴`)
+      console.log(`▶ cosnt data 부분에서는 코드를 즉각 실행시킬 수 있으므로 fetch에서 데이터를 불러오는 시간보다 먼저 계산이 완료됌`)
+      console.log(`▶ data는 respones.json() 형식으로 불러온 데이터에서 속성을 불러와야 하는데\n  => 이게 완료되기 전에 읽어냄`)
+      console.groupEnd()
+
       const respones = await fetch(url, options)
+
+      // await를 사용하는 이유
+      console.log('▼ 아래와 같이 promise 오브젝트 형태로 출력\n  ▶ %cPromise {<pending>}', 'font-style:italic;font-weight:500;color:#a1a1a1;background-color:#a6ffdb;font-size:11px')
       const data = await respones.json()
+      console.log('▼ 아래는 await를 사용시 출력 형태\n', data)
+      console.groupEnd()
+      // console.groupEnd()
+
       const results = data.results
-      console.log(data)
+      // console => 20개의 card생성 설명
+      console.group('results = data.results로 불러올 포스터들\nresults.length = 20개존재\n')
+      console.log(results)
+
       const container = document.querySelector('main .container')
-      let rowsHtml = '' 
+      let rowsHtml = '' //모든 row를 담을 문자열 변수
 
       for (let i = 0; i < results.length; i += 4) {
+         //    각 row는 4개의 card
          let rowHtml = '<div class="row">'
 
-         for (let j = 0; j < 4; j++) {
-            const index = i + j
-            if (index >= results.length) break
+         // console => row작동 원리
+         console.groupCollapsed(`${i / 4 + 1}번(${i}) row`)
 
+         for (let j = 0; j < 4; j++) {
+            //  console => col 작동 원리
+            console.groupCollapsed(`${i + j + 1}번째 index = ${i}+${j} = ${i + j}`)
+            console.log(`${j}`)
+            console.groupEnd()
+            const index = i + j
+            // 순서 [0] 1 2 3 => [4] 5 6 7 => [8] 9 10 11 => [12] 13 14 15 => [16] 17 18 19
+            // 여기까지 총 20개가 생성되고 index가 20이 되는순간은 21개째니까 중단시킴
+            if (index >= results.length) break // results 배열을 벗어나면 중단 (즉 내용물이 20개가 되면 끝)
             const movie = results[index]
             rowHtml += `
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 px-3 py-1 m-0">
@@ -204,9 +246,11 @@ const getPlayingMovies = async (url) => {
                     </div>
                 </div>`
          }
+         console.groupEnd()
          rowHtml += '</div>'
          rowsHtml += rowHtml //전체 row 문자열에 추가
       }
+      console.groupEnd()
 
       container.innerHTML = rowsHtml
    } catch (error) {
