@@ -102,7 +102,7 @@ const getCreditsMovie = async (movieCreditsUrl) => {
       const response = await fetch(movieCreditsUrl, options)
 
       const data = await response.json()
-    //   let castRowHtml = `<div class="row" style="margin-top:30px; justify-content: flex-start;">`
+      // let castRowHtml = `<div class="row" style="margin-top:30px; justify-content: flex-start;">`
       let castRowHtml = `<div class="Credits row" style="margin-top:30px">`
       console.log(data)
       console.log(data.cast.length)

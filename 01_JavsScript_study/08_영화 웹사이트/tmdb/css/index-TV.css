@@ -93,8 +93,53 @@ header button.navbar-toggler {
 }
 
 /* main 시작 */
+main .container {
+   background-color: yellowgreen;
+   box-sizing: border-box;
+   overflow: hidden;
+   padding: 0;
+}
 main .container .cardbox .slide_card img {
    height: 100%;
-   width: 100%;
+   border-radius: 4px;
    object-fit: cover;
+}
+main .container .cardbox .slide_card {
+   border-radius: 4px;
+   box-sizing: border-box;
+   width: 200px;
+   /* background-color: tan; */
+   border: 1px solid rgb(5, 45, 87);
+   margin: 0.5%;
+   height: 300px;
+}
+main .container .menu {
+   width: 100%;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+}
+main .container .menu h3 {
+   background-color: yellow;
+   line-height: 40px;
+   height: 40px;
+   padding-left: 30px;
+   /* font-weight: bold; */
+   font-size: 20px;
+   margin: 0;
+}
+main .container .menu .cardbox {
+   background-color: red;
+   width: 100%;
+   display: flex;
+   animation: slide 20s linear infinite;
+   animation-play-state: running;
+}
+@keyframes slide {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
 }
