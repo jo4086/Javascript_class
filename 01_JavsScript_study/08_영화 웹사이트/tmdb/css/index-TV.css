@@ -101,6 +101,7 @@ main .container {
 }
 main .container .cardbox .slide_card img {
    height: 100%;
+   width: 100%;
    border-radius: 4px;
    object-fit: cover;
 }
@@ -128,7 +129,7 @@ main .container .menu h3 {
    font-size: 20px;
    margin: 0;
 }
-main .container .menu .cardbox {
+/* main .container .menu .cardbox {
    background-color: red;
    width: 100%;
    display: flex;
@@ -142,4 +143,4 @@ main .container .menu .cardbox {
    100% {
       transform: translateX(-100%);
    }
-}
+} */

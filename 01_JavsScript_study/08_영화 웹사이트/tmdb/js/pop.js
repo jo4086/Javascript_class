@@ -77,21 +77,60 @@ option.forEach(function (e) {
 })
 
 const url = 'https://api.themoviedb.org/3/tv/popular?language=ko-KR&page=1'
+const right = document.querySelector('.right')
 
 const getPlayingPopularTvs = async (url) => {
    try {
       const respones = await fetch(url, options)
       const data = await respones.json()
+      const results = data.results
       console.log(data)
-      console.log(data.results.length)
-      for (let i = 0; i < data.results.length; i++) {
-         console.groupCollapsed(i)
-         console.log(data.results[i].name)
-         console.groupEnd()
+      // popularity 내림차순으로 인기 높은순 정렬
+      results.sort((a, b) => b.popularity - a.popularity)
+      let rowsHtml = ''
+
+      for (let i = 0; i < results.length; i += 4) {
+         let rowHtml = `<div>hi</div>`
+         console.log(rowHtml)
+         rowsHtml += rowHtml
+      }
+
+      for (let i = 0; i < results.length; i++) {
+         // console.group(i)
+         // console.log('인기도: ',data.results[i].popularity,'제목: ',data.results[i].name)
+         // console.groupEnd()
       }
       console.log(data.results)
+      // rowsHtml += rowHtml
+      right.innerHTML += rowsHtml
    } catch (error) {
       console.error('에러 발생: ', error)
    }
 }
 getPlayingPopularTvs(url)
+
+/* 
+     let test = `<ul style="width:100%; background-color:red; display:flex; justify-content:center;flex-direction: column;align-items:center;">
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      <li style="font-size:20px">
+      테스트
+      </li>
+      </ul>`
+ */
